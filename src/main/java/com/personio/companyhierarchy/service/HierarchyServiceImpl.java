@@ -20,6 +20,7 @@ public class HierarchyServiceImpl implements HierarchyService{
     private Map<String,String> employees = new HashMap<>();
     private EmployeeDTO employeeDTOTree;
     private JSONObject json = new JSONObject();
+    private static int treeHeight = 0;
 
     @Autowired
     private EmployeeRepository employeeRepository;
@@ -50,6 +51,10 @@ public class HierarchyServiceImpl implements HierarchyService{
                             || bossName.isEmpty()) {       // Duplicate case
                         bossName.add(entry.getValue());
                     }
+                }else{                                      // Checking loop
+                    if(entry.getKey().equalsIgnoreCase(employees.get(entry.getValue()))){
+                        throw ErrorConstants.LOOP_SUPERVISORS(entry.getValue(), employees.get(entry.getValue()));
+                    }
                 }
             }
             if (bossName.size() == 1) {                    // There is only one boss, he/she is the root of the tree
@@ -75,11 +80,13 @@ public class HierarchyServiceImpl implements HierarchyService{
      * @param employeeDTO: The employee that will be putted on tree
      */
     private void buildEmployeeTree(EmployeeDTO employeeDTO){
+        treeHeight++;
         employeeDTO.getSubordinates().addAll(getSubordinates(employeeDTO.getName()));
         if(employeeDTO.getSubordinates().isEmpty())
             return;
-        for(EmployeeDTO emp : employeeDTO.getSubordinates())
-               buildEmployeeTree(emp);                         // Reach the bottom of the tree
+        for(EmployeeDTO emp : employeeDTO.getSubordinates()) {
+            buildEmployeeTree(emp);                         // Reach the bottom of the tree
+        }
     }
 
     /**
@@ -164,6 +171,9 @@ public class HierarchyServiceImpl implements HierarchyService{
 
         employeeDTOTree = buildMapStructure(hierarchy);                 // Convert the request to a HashMap and throw errors if exists
         buildEmployeeTree(employeeDTOTree);                             // Build a tree based on the HashMap
+        if(treeHeight-1 != employees.size())        // Removing the root
+            throw ErrorConstants.LOOP_SUPERVISORS;
+
         saveDatabase(employeeDTOTree, true, null);      // Save the relations into the database
         System.out.println(printEmployeeTree(employeeDTOTree));
 

@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Map;
 
 public interface HierarchyService {
     public JSONObject saveHierarchy(String hierarchy) throws ApiExceptions;
