@@ -25,6 +25,10 @@ public class HierarchyServiceImpl implements HierarchyService{
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    public HierarchyServiceImpl(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+
     /**
      * This function receives the request, convert it into a HashMap and throw an error if there is
      * loop or more than one boss in the hierarchy
@@ -137,12 +141,24 @@ public class HierarchyServiceImpl implements HierarchyService{
 
         Employee empSaved;
         if(isRoot) {
-            empSaved = employeeRepository.save(new Employee(employeeDTOTree, null));     // Save the root and return the id
+            Employee emp = new Employee(employeeDTOTree, null);
+            Optional<Employee> employee = employeeRepository.findByName(emp.getName());
+            if(employee.isPresent()){                       // If the register already exists, just fix the fields values
+                emp = employee.get();
+                emp.setManagerId(null);
+            }
+                empSaved = employeeRepository.save(emp);     // Save the root and return the id
+
             idManager = empSaved.getEmployeeId();
         }
 
         for(EmployeeDTO employeeDTO : employeeDTOTree.getSubordinates()){
             Employee employee = new Employee(employeeDTO, idManager);
+            Optional<Employee> emp = employeeRepository.findByName(employee.getName());
+            if(emp.isPresent()){
+                employee = emp.get();
+                employee.setManagerId(idManager);
+            }
             empSaved = employeeRepository.save(employee);
             saveDatabase(employeeDTO, false, empSaved.getEmployeeId());
         }
@@ -176,7 +192,7 @@ public class HierarchyServiceImpl implements HierarchyService{
 
         saveDatabase(employeeDTOTree, true, null);      // Save the relations into the database
         System.out.println(printEmployeeTree(employeeDTOTree));
-
+        treeHeight = 0;
         return printEmployeeTree(employeeDTOTree);
     }
 

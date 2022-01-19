@@ -1,4 +1,4 @@
-package com.personio.companyhierarchy;
+package com.personio.companyhierarchy.controller;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -49,13 +49,13 @@ public class HierarchyControllerTest {
     MockMvc mvc;
     @MockBean
     HierarchyService service;
-    JSONObject response;
-    String body;
 
-    @BeforeEach
-    public void setup() throws JSONException, JsonProcessingException {
+
+    @Test
+    @DisplayName("Must create a valid company hierarchy")
+    public void mustCreateCompanyHierarchySuccessfully() throws Exception {
         JSONObject json = new JSONObject();
-        body = "{\n" +
+        String body = "{\n" +
                 "\t\"Barbara\": \"Nick\", \n" +
                 "\t\"Nick\": \"Sophie\", \n" +
                 "\t\"Sophie\": \"Jonas\"\n" +
@@ -70,13 +70,7 @@ public class HierarchyControllerTest {
         sophie.put("Sophie",nick);
         jonas.put("Jonas",sophie);
 
-        response = jonas;
-    }
-    @Test
-    @DisplayName("Must create a valid company hierarchy")
-    public void mustCreateCompanyHierarchySuccessfully() throws Exception {
-
-        BDDMockito.given(service.saveHierarchy(body)).willReturn(response);
+        BDDMockito.given(service.saveHierarchy(body)).willReturn(jonas);
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post(PERSONIO_API)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
@@ -85,8 +79,13 @@ public class HierarchyControllerTest {
 
         mvc.perform(request)
                 .andExpect(status().isCreated())
+                .andExpect(jsonPath("Jonas").isNotEmpty())
+                .andExpect(jsonPath("Jonas.Sophie").isNotEmpty())
+                .andExpect(jsonPath("Jonas.Sophie.Nick").isNotEmpty())
+                .andExpect(jsonPath("Jonas.Sophie.Nick.Barbara").isEmpty())
                 .andExpect(content().string("{\"Jonas\":{\"Sophie\":{\"Nick\":{\"Barbara\":null}}}}"));
     }
+
     @Test
     @DisplayName("Must fail due to creating a hierarchy with more than one boss")
     public void mustFailDueToMultipleBosses() throws Exception{
@@ -110,7 +109,7 @@ public class HierarchyControllerTest {
     }
 
     @Test
-    @DisplayName("Must fail due to creating a hierarchy with employees relation looping")
+    @DisplayName("Must fail due to creating a hierarchy with direct employees relation looping")
     public void mustFailDueToLoop() throws Exception{
         String body = "{\n" +
                 "\t\"Barbara\": \"Nick\", \n" +
@@ -128,6 +127,28 @@ public class HierarchyControllerTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("errors",Matchers.hasSize(1)))
                 .andExpect(jsonPath("errors[0]").value("There is a loop relation between employees 'Nick' and 'Barbara'"));
+    }
+
+    @Test
+    @DisplayName("Must fail due to creating a hierarchy with employees relation looping")
+    public void mustFailDueToLoopInEmployees() throws Exception{
+        String body = "{\t \n" +
+                "\t\"Sophie\": \"Jonas\",\n" +
+                "\t\"Nick\":\"Barbara\",\n" +
+                "\t\"Barbara\":\"Jonas\",\n" +
+                "\t\"Paul\":\"John\"\n" +
+                "}";
+
+        BDDMockito.given(service.saveHierarchy(body)).willThrow(ErrorConstants.LOOP_SUPERVISORS);
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post(PERSONIO_API)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(body);
+        mvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("errors",Matchers.hasSize(1)))
+                .andExpect(jsonPath("errors[0]").value("There is a loop in the hierarchy"));
     }
 
     @Test
@@ -152,4 +173,25 @@ public class HierarchyControllerTest {
                 .andExpect(jsonPath("errors[0]").value("The employee 'Barbara' must not have more than one supervisor."));
     }
 
+    @Test
+    @DisplayName("Must fail due to not exists a boss in the hierarchy")
+    public void mustFailDueToNoBoss() throws Exception{
+        String body = "{\t \n" +
+                "\t\"Sophie\": \"Jonas\",\n" +
+                "\t\"Nick\":\"Barbara\",\n" +
+                "\t\"Barbara\":\"Jonas\",\n" +
+                "\t\"Jonas\":\"Nick\"\n" +
+                "}";
+
+        BDDMockito.given(service.saveHierarchy(body)).willThrow(ErrorConstants.NO_BOSS);
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post(PERSONIO_API)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(body);
+        mvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("errors",Matchers.hasSize(1)))
+                .andExpect(jsonPath("errors[0]").value("There is no boss in this hierarchy"));
+    }
 }
