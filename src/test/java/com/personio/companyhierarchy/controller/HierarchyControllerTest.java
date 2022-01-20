@@ -4,6 +4,9 @@ package com.personio.companyhierarchy.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.personio.companyhierarchy.dto.EmployeeDTO;
+import com.personio.companyhierarchy.entity.Employee;
+import com.personio.companyhierarchy.exception.ApiErrors;
 import com.personio.companyhierarchy.exception.ErrorConstants;
 import com.personio.companyhierarchy.service.HierarchyService;
 import org.json.JSONException;
@@ -14,6 +17,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.BDDMockito;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -29,12 +33,13 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(SpringExtension.class)
@@ -193,5 +198,92 @@ public class HierarchyControllerTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("errors",Matchers.hasSize(1)))
                 .andExpect(jsonPath("errors[0]").value("There is no boss in this hierarchy"));
+    }
+
+    @Test
+    @DisplayName("Search for the supervisor and supervisor's supervisor from given employee")
+    public void searchSupervisorsForGivenEmployee() throws Exception {
+        String body = "{\n" +
+                "\t\"name\":\"Barbara\"\n" +
+                "}";
+
+        Employee emp = new Employee(null, "Barbara", null);
+        EmployeeDTO employeeDTO1 = new EmployeeDTO("Sophie", new ArrayList<EmployeeDTO>());
+        EmployeeDTO employeeDTO2 = new EmployeeDTO("Nick", new ArrayList<EmployeeDTO>());
+        EmployeeDTO employeeDTO3 = new EmployeeDTO("Barbara", new ArrayList<EmployeeDTO>());
+
+        employeeDTO1.getSubordinates().add(employeeDTO2);               // Bound the relations
+        employeeDTO2.getSubordinates().add(employeeDTO3);               // Bound the relations
+
+        BDDMockito.given(service.searchForSupervisors(emp))             // Mock the service method's call
+                .willReturn(printEmployeeTree(employeeDTO1));
+
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get(PERSONIO_API)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(body);
+
+        mvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(content().string("{\"Sophie\":{\"Nick\":{\"Barbara\":{}}}}"));
+    }
+
+    @Test
+    @DisplayName("Must return an empty json due to not finding the employee's name in database")
+    public void mustReturnEmptyJson() throws Exception {
+        String body = "{\n" +
+                "\t\"name\":\"Barbara\"\n" +
+                "}";
+
+        Employee emp = new Employee(null, "Barbara", null);
+
+        BDDMockito.given(service.searchForSupervisors(emp))             // Mock the service method's call
+                .willReturn(new JSONObject("{}"));
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get(PERSONIO_API)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(body);
+
+        mvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(content().string("{}"));
+    }
+
+    @Test
+    @DisplayName("Must throw an error due to not inform the name")
+    public void throwErrorDueToNecessityOfName() throws Exception {
+        String body = "{}";
+        Employee employee = new Employee();
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get(PERSONIO_API)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(body);
+
+        mvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("errors",Matchers.hasSize(1)))
+                .andExpect(jsonPath("errors[0]").value("The name of the employee must not be null"));
+    }
+
+
+    private JSONObject printEmployeeTree(EmployeeDTO employeeDTO) {
+        JSONObject obj = new JSONObject();
+
+        for(EmployeeDTO emp : employeeDTO.getSubordinates()){
+            JSONObject o = printEmployeeTree(emp);
+            if(!obj.isEmpty()) {
+                Iterator<String> keys = o.keys();
+                while(keys.hasNext()){
+                    String key = keys.next();
+                    obj.put(key, o.get(key));
+                }
+            }else
+                obj = o;
+        }
+        // Is in the bottom of tree
+        return new JSONObject().put(employeeDTO.getName(),obj);
     }
 }

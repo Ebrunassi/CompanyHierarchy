@@ -187,7 +187,7 @@ public class HierarchyServiceImpl implements HierarchyService{
 
         employeeDTOTree = buildMapStructure(hierarchy);                 // Convert the request to a HashMap and throw errors if exists
         buildEmployeeTree(employeeDTOTree);                             // Build a tree based on the HashMap
-        if(treeHeight-1 != employees.size())        // Removing the root
+        if(treeHeight-1 != employees.size())        // Removing the root in the count
             throw ErrorConstants.LOOP_SUPERVISORS;
 
         saveDatabase(employeeDTOTree, true, null);      // Save the relations into the database
@@ -204,7 +204,7 @@ public class HierarchyServiceImpl implements HierarchyService{
         if(!list.isEmpty())
             tree = addSubordinates(0, list);
         else
-            return null;
+            return new JSONObject("{}");
 
         return printEmployeeTree(tree);
     }
