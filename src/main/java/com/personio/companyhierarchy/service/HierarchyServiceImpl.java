@@ -224,13 +224,13 @@ public class HierarchyServiceImpl implements HierarchyService{
 
 
     @Override
-    public JSONObject searchForSupervisors(Employee employee) throws ApiExceptions {
-        List<Employee> list = employeeRepository.findSupervisorAndSupervisorsSupervisorFromGivenName(employee.getName());
-        logger.info("It was found {} employees related to '{}'", list.size(), employee.getName());
+    public JSONObject searchForSupervisors(String name) throws ApiExceptions {
+        List<Employee> list = employeeRepository.findSupervisorAndSupervisorsSupervisorFromGivenName(name);
+        logger.info("It was found {} employees related to '{}'", list.size(), name);
         EmployeeDTO tree = new EmployeeDTO();
         if(!list.isEmpty()) {
             tree = addSubordinates(0, list);
-            logger.info("Supervisors of '{}' found in database: {}", employee.getName(), gson.toJson(tree));
+            logger.info("Supervisors of '{}' found in database: {}", name, gson.toJson(tree));
         }else
             return new JSONObject("{}");
         JSONObject displayTree = printEmployeeTree(tree);

@@ -221,7 +221,7 @@ public class HierarchyControllerTest {
         employeeDTO1.getSubordinates().add(employeeDTO2);               // Bound the relations
         employeeDTO2.getSubordinates().add(employeeDTO3);               // Bound the relations
 
-        BDDMockito.given(service.searchForSupervisors(emp))             // Mock the service method's call
+        BDDMockito.given(service.searchForSupervisors(emp.getName()))             // Mock the service method's call
                 .willReturn(printEmployeeTree(employeeDTO1));
 
 
@@ -244,7 +244,7 @@ public class HierarchyControllerTest {
 
         Employee emp = new Employee(null, "Barbara", null);
 
-        BDDMockito.given(service.searchForSupervisors(emp))             // Mock the service method's call
+        BDDMockito.given(service.searchForSupervisors(emp.getName()))             // Mock the service method's call
                 .willReturn(new JSONObject("{}"));
 
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get(PERSONIO_API)

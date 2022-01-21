@@ -12,5 +12,5 @@ import java.util.Map;
 
 public interface HierarchyService {
     public JSONObject saveHierarchy(String hierarchy) throws ApiExceptions;
-    public JSONObject searchForSupervisors(Employee employee) throws ApiExceptions;
+    public JSONObject searchForSupervisors(String name) throws ApiExceptions;
 }

@@ -195,7 +195,7 @@ public class HierarchyServiceTest {
         Mockito.when(employeeRepository.findSupervisorAndSupervisorsSupervisorFromGivenName(employee.getName()))
                 .thenReturn(hierarchy);
 
-        JSONObject companyHierarchy = hierarchyService.searchForSupervisors(employee);         // Execution
+        JSONObject companyHierarchy = hierarchyService.searchForSupervisors(employee.getName());         // Execution
 
         assertThat(companyHierarchy).isNotNull();           // The returned object is not null
         String json = companyHierarchy.toString();
@@ -213,7 +213,7 @@ public class HierarchyServiceTest {
         Mockito.when(employeeRepository.findSupervisorAndSupervisorsSupervisorFromGivenName(Mockito.anyString()))
                 .thenReturn(new ArrayList<Employee>());     // Return an empty list
 
-        JSONObject companyHierarchy = hierarchyService.searchForSupervisors(employee);         // Execution
+        JSONObject companyHierarchy = hierarchyService.searchForSupervisors(employee.getName());         // Execution
         String json = companyHierarchy.toString();
 
         assertThat(companyHierarchy).isNotNull();           // The returned object is not null

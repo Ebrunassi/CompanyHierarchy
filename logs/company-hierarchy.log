@@ -4083,3 +4083,291 @@ INFO  2022-01-21 14:35:21.781 [main] EndpointLinksResolver - Exposing 1 endpoint
 INFO  2022-01-21 14:35:21.906 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
 INFO  2022-01-21 14:35:21.985 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
 INFO  2022-01-21 14:35:22.022 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 19.605 seconds (JVM running for 22.557)
+INFO  2022-01-21 14:47:04.545 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-21 14:47:04.549 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-21 14:47:04.574 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-21 14:47:15.498 [main] AbstractTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.personio.companyhierarchy.service.HierarchyServiceTest], using DelegatingSmartContextLoader
+INFO  2022-01-21 14:47:15.511 [main] AbstractContextLoader - Could not detect default resource locations for test class [com.personio.companyhierarchy.service.HierarchyServiceTest]: no resource found for suffixes {-context.xml}.
+INFO  2022-01-21 14:47:15.513 [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.personio.companyhierarchy.service.HierarchyServiceTest]: HierarchyServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+INFO  2022-01-21 14:47:15.635 [main] AbstractTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+INFO  2022-01-21 14:47:15.658 [main] AbstractTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5ea502e0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@443dbe42, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@473b3b7a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1734f68, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@77b7ffa4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5ed190be, org.springframework.test.context.transaction.TransactionalTestExecutionListener@402f80f5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5bbc9f97, org.springframework.test.context.event.EventPublishingTestExecutionListener@133e019b, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@41382722, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@7dac3fd8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@425357dd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2102a4d5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@210386e0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3d4d3fe7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@65f87a2c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@51684e4a]
+INFO  2022-01-21 14:47:16.631 [main] HierarchyServiceImpl - It was found 0 employees related to 'Barbara'
+INFO  2022-01-21 14:47:16.728 [main] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-21 14:47:16.729 [main] HierarchyServiceImpl - Boss founded: Jonas
+INFO  2022-01-21 14:47:16.729 [main] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 3
+INFO  2022-01-21 14:47:16.730 [main] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-21 14:47:16.739 [main] HierarchyServiceImpl - Strucutre tree: {"name":"Jonas","subordinates":[{"name":"Sophie","subordinates":[]},{"name":"Barbara","subordinates":[{"name":"Nick","subordinates":[]}]}]}
+INFO  2022-01-21 14:47:16.739 [main] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-21 14:47:16.747 [main] HierarchyServiceImpl - Saved into database: {"employeeId":1,"name":"Jonas"}
+INFO  2022-01-21 14:47:16.750 [main] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Jonas"}
+INFO  2022-01-21 14:47:16.752 [main] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Jonas"}
+INFO  2022-01-21 14:47:16.753 [main] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Jonas"}
+INFO  2022-01-21 14:47:16.754 [main] HierarchyServiceImpl - Returning response: {"Jonas":{"Sophie":{},"Barbara":{"Nick":{}}}}
+INFO  2022-01-21 14:47:16.773 [main] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-21 14:47:16.774 [main] HierarchyServiceImpl - Boss founded: Jonas
+INFO  2022-01-21 14:47:16.775 [main] HierarchyServiceImpl - Boss founded: Paul
+ERROR 2022-01-21 14:47:16.776 [main] HierarchyServiceImpl - There are more than one found in this structure.
+INFO  2022-01-21 14:47:16.799 [main] HierarchyServiceImpl - It was found 3 employees related to 'Barbara'
+INFO  2022-01-21 14:47:16.801 [main] HierarchyServiceImpl - Supervisors of 'Barbara' found in database: {"name":"Sophie","subordinates":[{"name":"Nick","subordinates":[{"name":"Barbara","subordinates":[]}]}]}
+INFO  2022-01-21 14:47:16.803 [main] HierarchyServiceImpl - Returning response: {"Sophie":{"Nick":{"Barbara":{}}}}
+INFO  2022-01-21 14:47:16.817 [main] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-21 14:47:16.817 [main] HierarchyServiceImpl - Boss founded: Jonas
+ERROR 2022-01-21 14:47:16.818 [main] HierarchyServiceImpl - There is a loop relation between 'Nick' and 'Barbara'
+INFO  2022-01-21 14:47:16.838 [main] ErrorConstants - The employee 'Barbara' must not have more than one supervisor.
+INFO  2022-01-21 14:47:16.857 [main] HierarchyServiceImpl - Finding the boss of the structure...
+ERROR 2022-01-21 14:47:16.857 [main] HierarchyServiceImpl - There is no boss in this structure.
+INFO  2022-01-21 14:47:40.762 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-21 14:47:40.813 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 39032 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-21 14:47:40.821 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-21 14:47:42.802 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-21 14:47:42.869 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-21 14:47:44.258 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-21 14:47:44.275 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:47:44.277 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-21 14:47:44.278 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-21 14:47:44.455 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-21 14:47:44.457 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3528 ms
+INFO  2022-01-21 14:47:45.744 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-21 14:47:45.910 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-21 14:47:46.412 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-21 14:47:46.563 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-21 14:47:46.878 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-21 14:47:46.898 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-21 14:47:47.905 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-21 14:47:47.918 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-21 14:47:48.985 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-21 14:47:49.185 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 6be9536d-8f56-412b-9587-940061eda582
+
+INFO  2022-01-21 14:47:49.367 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-21 14:47:49.368 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-21 14:47:49.368 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-21 14:47:49.369 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-21 14:47:49.369 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-21 14:47:49.370 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-21 14:47:49.475 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e92e9a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b1d93e9, org.springframework.security.web.header.HeaderWriterFilter@268f126f, org.springframework.security.web.authentication.logout.LogoutFilter@73eaae1e, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@c0a8787, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75ff2b6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@276eafad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65cf8da0, org.springframework.security.web.session.SessionManagementFilter@3bede349, org.springframework.security.web.access.ExceptionTranslationFilter@7e8f97dd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@94b5fe3]
+INFO  2022-01-21 14:47:51.857 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-21 14:47:51.925 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:47:51.949 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-21 14:47:51.975 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 11.734 seconds (JVM running for 14.342)
+INFO  2022-01-21 14:47:54.782 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-21 14:47:54.783 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-21 14:47:54.787 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 4 ms
+WARN  2022-01-21 14:47:54.959 [http-nio-8080-exec-1] AbstractHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'employee's name' for method parameter type String is not present]
+INFO  2022-01-21 14:48:50.604 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-21 14:48:50.607 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-21 14:48:50.623 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-21 14:49:36.315 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-21 14:49:36.488 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 39430 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-21 14:49:36.496 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-21 14:49:39.587 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-21 14:49:39.926 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 276 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-21 14:49:42.013 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-21 14:49:42.035 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:49:42.037 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-21 14:49:42.038 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-21 14:49:42.288 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-21 14:49:42.290 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5672 ms
+INFO  2022-01-21 14:49:43.581 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-21 14:49:43.677 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-21 14:49:44.008 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-21 14:49:44.230 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-21 14:49:44.692 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-21 14:49:44.720 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-21 14:49:46.370 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-21 14:49:46.384 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-21 14:49:47.977 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-21 14:49:48.284 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: fb8d9068-491a-4b65-ae18-e13239ee56f0
+
+INFO  2022-01-21 14:49:48.665 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-21 14:49:48.667 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-21 14:49:48.668 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-21 14:49:48.670 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-21 14:49:48.675 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-21 14:49:48.675 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-21 14:49:48.920 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61e4a072, org.springframework.security.web.context.SecurityContextPersistenceFilter@52a23575, org.springframework.security.web.header.HeaderWriterFilter@7c55e559, org.springframework.security.web.authentication.logout.LogoutFilter@1acd2a14, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@32f2de5c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bb661e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44b82007, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a6df932, org.springframework.security.web.session.SessionManagementFilter@2ae0eb98, org.springframework.security.web.access.ExceptionTranslationFilter@7f38545a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e97da56]
+INFO  2022-01-21 14:49:53.596 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-21 14:49:53.742 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:49:53.772 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-21 14:49:53.822 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 18.327 seconds (JVM running for 20.166)
+INFO  2022-01-21 14:49:58.115 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-21 14:49:58.116 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-21 14:49:58.119 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 2 ms
+INFO  2022-01-21 14:50:49.581 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-21 14:50:49.585 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-21 14:50:49.604 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-21 14:50:56.399 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-21 14:50:56.474 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 39789 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-21 14:50:56.489 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-21 14:50:58.258 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-21 14:50:58.338 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-21 14:50:59.469 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-21 14:50:59.485 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:50:59.486 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-21 14:50:59.487 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-21 14:50:59.628 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-21 14:50:59.629 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3038 ms
+INFO  2022-01-21 14:51:00.205 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-21 14:51:00.273 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-21 14:51:00.485 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-21 14:51:00.621 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-21 14:51:00.897 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-21 14:51:00.925 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-21 14:51:01.821 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-21 14:51:01.832 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-21 14:51:02.764 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-21 14:51:02.985 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7d37a3f4-bffa-46e7-87d4-7cbc263d36d8
+
+INFO  2022-01-21 14:51:03.135 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-21 14:51:03.136 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-21 14:51:03.136 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-21 14:51:03.136 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-21 14:51:03.137 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-21 14:51:03.137 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-21 14:51:03.223 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2740585b, org.springframework.security.web.context.SecurityContextPersistenceFilter@5bb90b89, org.springframework.security.web.header.HeaderWriterFilter@5bb661e0, org.springframework.security.web.authentication.logout.LogoutFilter@3df7e309, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@3816efab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6888746c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f3310fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d6e09f0, org.springframework.security.web.session.SessionManagementFilter@5cb4ba80, org.springframework.security.web.access.ExceptionTranslationFilter@c5c2a84, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3fe59f84]
+INFO  2022-01-21 14:51:05.451 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-21 14:51:05.497 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:51:05.518 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-21 14:51:05.546 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 9.666 seconds (JVM running for 11.434)
+INFO  2022-01-21 14:51:09.874 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-21 14:51:09.876 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-21 14:51:09.906 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 26 ms
+INFO  2022-01-21 14:52:02.700 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-21 14:52:02.703 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-21 14:52:02.725 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-21 14:52:12.282 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-21 14:52:12.379 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 40020 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-21 14:52:12.394 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-21 14:52:14.416 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-21 14:52:14.488 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-21 14:52:15.623 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-21 14:52:15.637 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:52:15.638 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-21 14:52:15.639 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-21 14:52:15.764 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-21 14:52:15.765 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3230 ms
+INFO  2022-01-21 14:52:16.451 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-21 14:52:16.507 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-21 14:52:16.681 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-21 14:52:16.801 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-21 14:52:17.040 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-21 14:52:17.067 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-21 14:52:17.952 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-21 14:52:17.968 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-21 14:52:19.039 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-21 14:52:19.283 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ca789858-1fe0-4ad7-95d3-d0fa59d60ffc
+
+INFO  2022-01-21 14:52:19.466 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-21 14:52:19.467 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-21 14:52:19.467 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-21 14:52:19.468 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-21 14:52:19.468 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-21 14:52:19.469 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-21 14:52:19.580 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1644cc2d, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e8995cc, org.springframework.security.web.header.HeaderWriterFilter@78d52d4c, org.springframework.security.web.authentication.logout.LogoutFilter@549be307, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@f83616, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@969c2f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6af02de0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@162a5c4c, org.springframework.security.web.session.SessionManagementFilter@5a644d75, org.springframework.security.web.access.ExceptionTranslationFilter@5cb64b9c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b2e841]
+INFO  2022-01-21 14:52:22.186 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-21 14:52:22.253 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:52:22.278 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-21 14:52:22.309 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 10.727 seconds (JVM running for 13.879)
+INFO  2022-01-21 14:53:02.349 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-21 14:53:02.350 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-21 14:53:02.355 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 4 ms
+WARN  2022-01-21 14:53:02.513 [http-nio-8080-exec-1] AbstractHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+WARN  2022-01-21 14:53:04.305 [http-nio-8080-exec-2] AbstractHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+INFO  2022-01-21 14:54:25.371 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-21 14:54:25.378 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-21 14:54:25.394 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-21 14:54:34.219 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-21 14:54:34.297 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 40449 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-21 14:54:34.310 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-21 14:54:36.056 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-21 14:54:36.139 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-21 14:54:37.236 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-21 14:54:37.252 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:54:37.254 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-21 14:54:37.254 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-21 14:54:37.378 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-21 14:54:37.379 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2947 ms
+INFO  2022-01-21 14:54:37.971 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-21 14:54:38.029 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-21 14:54:38.250 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-21 14:54:38.387 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-21 14:54:38.619 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-21 14:54:38.641 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-21 14:54:39.456 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-21 14:54:39.466 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-21 14:54:40.318 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-21 14:54:40.542 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 3edf91e5-fb08-4e1c-8350-4452f481abcd
+
+INFO  2022-01-21 14:54:40.683 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-21 14:54:40.684 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-21 14:54:40.685 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-21 14:54:40.686 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-21 14:54:40.687 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-21 14:54:40.687 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-21 14:54:40.770 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1415f18d, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ed0128b, org.springframework.security.web.header.HeaderWriterFilter@1a7f2d34, org.springframework.security.web.authentication.logout.LogoutFilter@195d4780, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@61c42e54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44b82007, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72e4ffa2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@533690d, org.springframework.security.web.session.SessionManagementFilter@3f473daf, org.springframework.security.web.access.ExceptionTranslationFilter@6f2b608e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28721794]
+INFO  2022-01-21 14:54:42.910 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-21 14:54:42.954 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:54:42.972 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-21 14:54:42.994 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 9.427 seconds (JVM running for 11.386)
+INFO  2022-01-21 14:54:44.678 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-21 14:54:44.678 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-21 14:54:44.682 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 3 ms
+WARN  2022-01-21 14:54:44.819 [http-nio-8080-exec-1] AbstractHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+INFO  2022-01-21 14:55:50.959 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-21 14:55:50.963 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-21 14:55:50.986 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-21 14:55:57.898 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-21 14:55:57.951 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 40633 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-21 14:55:57.969 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-21 14:55:59.846 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-21 14:55:59.925 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-21 14:56:01.117 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-21 14:56:01.130 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:56:01.131 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-21 14:56:01.132 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-21 14:56:01.240 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-21 14:56:01.241 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3195 ms
+INFO  2022-01-21 14:56:01.937 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-21 14:56:02.003 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-21 14:56:02.206 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-21 14:56:02.359 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-21 14:56:02.649 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-21 14:56:02.673 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-21 14:56:03.623 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-21 14:56:03.636 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-21 14:56:04.603 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-21 14:56:04.789 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 87ab0bad-c3d6-4e2b-bfea-a06f063d58df
+
+INFO  2022-01-21 14:56:04.923 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-21 14:56:04.924 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-21 14:56:04.924 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-21 14:56:04.925 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-21 14:56:04.925 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-21 14:56:04.926 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-21 14:56:05.000 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c989d82, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a561f7d, org.springframework.security.web.header.HeaderWriterFilter@507187c1, org.springframework.security.web.authentication.logout.LogoutFilter@3390621a, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@2e04c89d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5432be12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18c95fbb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e7dd504, org.springframework.security.web.session.SessionManagementFilter@542c6165, org.springframework.security.web.access.ExceptionTranslationFilter@397f9672, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40273969]
+INFO  2022-01-21 14:56:07.365 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-21 14:56:07.449 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-21 14:56:07.478 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-21 14:56:07.514 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 10.181 seconds (JVM running for 12.101)
+INFO  2022-01-21 14:56:12.693 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-21 14:56:12.694 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-21 14:56:12.696 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 2 ms
+INFO  2022-01-21 14:56:12.880 [http-nio-8080-exec-1] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Joao'
+INFO  2022-01-21 14:56:12.943 [http-nio-8080-exec-1] HierarchyServiceImpl - It was found 3 employees related to 'Joao'
+INFO  2022-01-21 14:56:12.961 [http-nio-8080-exec-1] HierarchyServiceImpl - Supervisors of 'Joao' found in database: {"name":"Pedro","subordinates":[{"name":"Lucas","subordinates":[{"name":"Joao","subordinates":[]}]}]}
+INFO  2022-01-21 14:56:12.963 [http-nio-8080-exec-1] HierarchyServiceImpl - Returning response: {"Pedro":{"Lucas":{"Joao":{}}}}
+INFO  2022-01-21 14:57:07.543 [http-nio-8080-exec-7] AbstractOpenApiResource - Init duration for springdoc-openapi is: 341 ms
+INFO  2022-01-21 14:57:25.787 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-21 14:57:25.792 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-21 14:57:25.811 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
