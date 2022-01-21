@@ -8,6 +8,7 @@ import com.personio.companyhierarchy.dto.EmployeeDTO;
 import com.personio.companyhierarchy.entity.Employee;
 import com.personio.companyhierarchy.exception.ApiErrors;
 import com.personio.companyhierarchy.exception.ErrorConstants;
+import com.personio.companyhierarchy.security.WebSecurityConfig;
 import com.personio.companyhierarchy.service.HierarchyService;
 import org.json.JSONException;
 
@@ -19,6 +20,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.BDDMockito;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -26,6 +29,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.hamcrest.Matchers;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
@@ -45,7 +49,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 @WebMvcTest
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc(addFilters = false)
+@EnableAutoConfiguration(exclude = { SecurityAutoConfiguration.class, WebSecurityConfig.class })
 public class HierarchyControllerTest {
 
     public static String PERSONIO_API = "/personio/hierarchy";
@@ -58,6 +63,7 @@ public class HierarchyControllerTest {
 
     @Test
     @DisplayName("Must create a valid company hierarchy")
+    @WithMockUser(username = "personio", password = "personio", roles = "USER")
     public void mustCreateCompanyHierarchySuccessfully() throws Exception {
         JSONObject json = new JSONObject();
         String body = "{\n" +

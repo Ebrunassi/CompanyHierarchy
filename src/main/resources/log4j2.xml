@@ -12,19 +12,6 @@
 			</Policies>
 		</RollingFile>
 
-		
-<!--		<SMTP name="SMTPAppender" smtpProtocol="smtps" smtpPort="465"-->
-<!--			subject="nriskweb-consulta"-->
-<!--			to="evandrormbrunassi@gmail.com"-->
-<!--			from="noreply@norisklog.com.br"-->
-<!--			smtpHost="sharedrelay-cluster.mandic.net.br"-->
-<!--			smtpUsername="noriskgr@shared.mandic.net.br"-->
-<!--			smtpPassword="S}6mlM>(B3" bufferSize="1">-->
-<!--			<PatternLayout>-->
-<!--				<pattern>%-5level %d{yyy-MM-dd HH:mm:ss.SSS} [%t] - %msg%n</pattern>-->
-<!--			</PatternLayout>-->
-<!--		</SMTP>-->
-
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout
 				pattern="%-5level %d{yyy-MM-dd HH:mm:ss.SSS} [%t] %C{1} - %msg%n" />

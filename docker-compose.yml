@@ -1,6 +1,38 @@
 version: '3'
 
 services:
+  # personio-company-hierarchy:
+  #   image: personio-company-hierarchy:1.0
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - postgres-compose-network
+  #   volumes:
+  #     - /etc/localtime:/etc/localtime:ro
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
+  #     - ./data:/data
+  #     - /home/evandro/personio/company-hierarchy:/logs
+  #   depends_on:
+  #     - postgres-compose
+  #     - personio-login
+
+  personio-login:
+    image: personio-login:1.0
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    networks:
+      - postgres-compose-network
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./data:/data
+      - /home/evandro/personio/login:/logs
+    depends_on:
+      - postgres-compose
+
+
   postgres-compose:
     image: postgres
     environment:

@@ -6,6 +6,8 @@ import com.personio.companyhierarchy.exception.ApiErrors;
 import com.personio.companyhierarchy.exception.ApiExceptions;
 import com.personio.companyhierarchy.service.HierarchyService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.apache.logging.log4j.LogManager;
@@ -33,7 +35,8 @@ public class HierarchyController {
     private ModelMapper modelMapper = new ModelMapper();
     Logger logger = LogManager.getLogger();
 
-    @Operation(description = "Returns the hierarchy")
+    @Operation(description = "Post method where you can submit a String in JSON format" +
+            " and receive back a JSON containing the proposed company hierarchy")
     @ApiResponse(responseCode = "201", description = "OK")
     @PostMapping(produces = "application/json")
     public ResponseEntity<Map<String,Object>> getHierarchy(@RequestBody String body) throws ApiExceptions {
