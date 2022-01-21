@@ -51,7 +51,7 @@ public class EmployeeRepositoryTest {
     }
 
     @Test
-    @DisplayName("Not found an employee successfully by the name")
+    @DisplayName("Not found an employee by the name")
     public void notFoundEmployeeByName(){
         Optional<Employee> founded = bookRepository.findByName("Paul");
         assertThat(founded.isEmpty()).isTrue();                              // The option must not have an element inside of it

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="CompanyHierarchy">
+	<Appenders>
+
+		<RollingFile name="application"
+			fileName="./logs/company-hierarchy.log"
+			filePattern="./logs/company-hierarchy-%d{MM-dd-yyyy}.log.gz">
+			<PatternLayout
+				pattern="%-5level %d{yyy-MM-dd HH:mm:ss.SSS} [%t] %C{1} - %msg%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+
+		
+<!--		<SMTP name="SMTPAppender" smtpProtocol="smtps" smtpPort="465"-->
+<!--			subject="nriskweb-consulta"-->
+<!--			to="evandrormbrunassi@gmail.com"-->
+<!--			from="noreply@norisklog.com.br"-->
+<!--			smtpHost="sharedrelay-cluster.mandic.net.br"-->
+<!--			smtpUsername="noriskgr@shared.mandic.net.br"-->
+<!--			smtpPassword="S}6mlM>(B3" bufferSize="1">-->
+<!--			<PatternLayout>-->
+<!--				<pattern>%-5level %d{yyy-MM-dd HH:mm:ss.SSS} [%t] - %msg%n</pattern>-->
+<!--			</PatternLayout>-->
+<!--		</SMTP>-->
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%-5level %d{yyy-MM-dd HH:mm:ss.SSS} [%t] %C{1} - %msg%n" />
+		</Console>
+
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="Console" level="info" />
+			<AppenderRef ref="application" level="info" />
+		</Root>
+<!--		<Logger name = "com.personio.companyhierarchy.controller"-->
+<!--			level="info">-->
+<!--			<AppenderRef ref="application" />-->
+<!--		</Logger>-->
+
+<!--		<Root level="info">-->
+<!--			<AppenderRef ref="Console" />-->
+<!--		</Root>-->
+	</Loggers>
+</Configuration>

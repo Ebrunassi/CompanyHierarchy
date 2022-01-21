@@ -21,8 +21,8 @@ public class Employee {
     private String name;
     private Long managerId;
 
-    public Employee(EmployeeDTO employeeDTO, Long managerId) {
-        this.name = employeeDTO.getName();
-        this.managerId = managerId;
+    public Employee(EmployeeDTO employeeDTOTree, Long idManager) {
+        this.name = employeeDTOTree.getName();
+        this.managerId = idManager;
     }
 }

@@ -8,6 +8,8 @@ import com.personio.companyhierarchy.service.HierarchyService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -29,11 +31,13 @@ public class HierarchyController {
     @Autowired
     HierarchyService hierarchyService;
     private ModelMapper modelMapper = new ModelMapper();
+    Logger logger = LogManager.getLogger();
 
     @Operation(description = "Returns the hierarchy")
     @ApiResponse(responseCode = "201", description = "OK")
     @PostMapping(produces = "application/json")
     public ResponseEntity<Map<String,Object>> getHierarchy(@RequestBody String body) throws ApiExceptions {
+        logger.info("Creating a new hierarchy. Submitted structure: " + body);
         return new ResponseEntity<Map<String,Object>>(hierarchyService.saveHierarchy(body).toMap(),HttpStatus.CREATED);
     }
 
@@ -43,6 +47,7 @@ public class HierarchyController {
     @ResponseBody
     public Map<String,Object> getSupervisors(@RequestBody @Valid EmployeeDTO employeeDTO){
         Employee employee = modelMapper.map(employeeDTO, Employee.class);
+        logger.info("Searching for supervisor and supervisor's supervisor of the employee '{}'", employee.getName());
         return hierarchyService.searchForSupervisors(employee).toMap();
     }
 

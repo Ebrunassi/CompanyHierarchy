@@ -1,10 +1,13 @@
 package com.personio.companyhierarchy.service;
 
+import com.google.gson.Gson;
 import com.personio.companyhierarchy.dto.EmployeeDTO;
 import com.personio.companyhierarchy.entity.Employee;
 import com.personio.companyhierarchy.exception.ApiExceptions;
 import com.personio.companyhierarchy.exception.ErrorConstants;
 import com.personio.companyhierarchy.repository.EmployeeRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.modelmapper.ModelMapper;
@@ -17,6 +20,8 @@ import java.util.*;
 @Service
 public class HierarchyServiceImpl implements HierarchyService{
 
+    Logger logger = LogManager.getLogger();
+    Gson gson = new Gson();
     private Map<String,String> employees = new HashMap<>();
     private EmployeeDTO employeeDTOTree;
     private JSONObject json = new JSONObject();
@@ -31,7 +36,7 @@ public class HierarchyServiceImpl implements HierarchyService{
 
     /**
      * This function receives the request, convert it into a HashMap and throw an error if there is
-     * loop or more than one boss in the hierarchy
+     * a loop or more than one boss in the hierarchy
      * @param hierarchy: resquest's body
      * @return
      * @throws ApiExceptions
@@ -47,6 +52,7 @@ public class HierarchyServiceImpl implements HierarchyService{
             }
 
             // Finding the most high-level boss
+            logger.info("Finding the boss of the structure...");
             List<String> bossName = new ArrayList<String>();
             for (Map.Entry<String, String> entry : employees.entrySet()) {
                 if (!employees.containsKey(entry.getValue())) {                         // The name must not exists in the keys
@@ -54,27 +60,35 @@ public class HierarchyServiceImpl implements HierarchyService{
                                 !bossName.get(0).equalsIgnoreCase(entry.getValue()))
                             || bossName.isEmpty()) {       // Duplicate case
                         bossName.add(entry.getValue());
+                        logger.info("Boss founded: " + entry.getValue());
                     }
                 }else{                                      // Checking loop
                     if(entry.getKey().equalsIgnoreCase(employees.get(entry.getValue()))){
+                        logger.error("There is a loop relation between '{}' and '{}'", entry.getValue(), employees.get(entry.getValue()));
                         throw ErrorConstants.LOOP_SUPERVISORS(entry.getValue(), employees.get(entry.getValue()));
                     }
                 }
             }
             if (bossName.size() == 1) {                    // There is only one boss, he/she is the root of the tree
+                logger.info("HashMap containing the relation has been created. Number of elements: {}", employees.size());
                 return EmployeeDTO.builder()
                             .name(bossName.get(0))
                             .subordinates(new ArrayList<EmployeeDTO>())
                         .build();
             }
-            else if (bossName.size() > 1)
+            else if (bossName.size() > 1){
+                logger.error("There are more than one found in this structure.");
                 throw ErrorConstants.MORE_THAN_ONE_BOSS;
-            else
+            }
+            else {
+                logger.error("There is no boss in this structure.");
                 throw ErrorConstants.NO_BOSS;
+            }
 
         }catch (JSONException jsonException){
-            if(jsonException.getMessage().contains("Duplicate key"))
+            if(jsonException.getMessage().contains("Duplicate key")) {
                 throw ErrorConstants.MULTIPLE_SUPERVISORS(jsonException.getMessage());
+            }
         }
         return null;
     }
@@ -109,7 +123,7 @@ public class HierarchyServiceImpl implements HierarchyService{
     }
 
     /**
-     * This functon process the hierarchy in order to be shown as they requested way
+     * This function process the hierarchy in order to be shown as the requested way
      * @param employeeDTO: the root of the tree
      * @return
      */
@@ -147,7 +161,8 @@ public class HierarchyServiceImpl implements HierarchyService{
                 emp = employee.get();
                 emp.setManagerId(null);
             }
-                empSaved = employeeRepository.save(emp);     // Save the root and return the id
+            empSaved = employeeRepository.save(emp);     // Save the root and return the id
+            logger.info("Saved into database: " + gson.toJson(empSaved));
 
             idManager = empSaved.getEmployeeId();
         }
@@ -160,6 +175,7 @@ public class HierarchyServiceImpl implements HierarchyService{
                 employee.setManagerId(idManager);
             }
             empSaved = employeeRepository.save(employee);
+            logger.info("Saved into table 'employee': " + gson.toJson(empSaved));
             saveDatabase(employeeDTO, false, empSaved.getEmployeeId());
         }
     }
@@ -184,29 +200,42 @@ public class HierarchyServiceImpl implements HierarchyService{
 
     @Override
     public JSONObject saveHierarchy(String hierarchy) throws ApiExceptions {
+        Gson gson = new Gson();
 
         employeeDTOTree = buildMapStructure(hierarchy);                 // Convert the request to a HashMap and throw errors if exists
+        logger.info("Converting the structure into a tree...");
         buildEmployeeTree(employeeDTOTree);                             // Build a tree based on the HashMap
-        if(treeHeight-1 != employees.size())        // Removing the root in the count
+        if(treeHeight-1 != employees.size()) {        // Removing the root in the count
+            logger.error("There is a loop in the hierarchy.");
             throw ErrorConstants.LOOP_SUPERVISORS;
+        }
+        logger.info("Strucutre tree: " + gson.toJson(employeeDTOTree));
 
+        logger.info("Saving the structure into database...");
         saveDatabase(employeeDTOTree, true, null);      // Save the relations into the database
         System.out.println(printEmployeeTree(employeeDTOTree));
+
         treeHeight = 0;
-        return printEmployeeTree(employeeDTOTree);
+
+        JSONObject displayTree = printEmployeeTree(employeeDTOTree);     // Contains the tree ready to be returned as response
+        logger.info("Returning response: " + displayTree.toString());
+        return displayTree;
     }
 
 
     @Override
     public JSONObject searchForSupervisors(Employee employee) throws ApiExceptions {
         List<Employee> list = employeeRepository.findSupervisorAndSupervisorsSupervisorFromGivenName(employee.getName());
+        logger.info("It was found {} employees related to '{}'", list.size(), employee.getName());
         EmployeeDTO tree = new EmployeeDTO();
-        if(!list.isEmpty())
+        if(!list.isEmpty()) {
             tree = addSubordinates(0, list);
-        else
+            logger.info("Supervisors of '{}' found in database: {}", employee.getName(), gson.toJson(tree));
+        }else
             return new JSONObject("{}");
-
-        return printEmployeeTree(tree);
+        JSONObject displayTree = printEmployeeTree(tree);
+        logger.info("Returning response: " + displayTree.toString());
+        return displayTree;
     }
 
 }
