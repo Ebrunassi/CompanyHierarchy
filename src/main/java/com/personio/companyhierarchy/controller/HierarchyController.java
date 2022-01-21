@@ -6,7 +6,6 @@ import com.personio.companyhierarchy.exception.ApiErrors;
 import com.personio.companyhierarchy.exception.ApiExceptions;
 import com.personio.companyhierarchy.service.HierarchyService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -47,12 +46,12 @@ public class HierarchyController {
 
     @Operation(description = "Returns the supervisor and the supervisor's supervisor of a given employee")
     @ApiResponse(responseCode = "200")
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET, produces = "application/json")
+    @GetMapping(produces = "application/json")
     @ResponseBody
-    public Map<String,Object> getSupervisors(@PathVariable(value = "name")
-                                                 @Parameter(description = "Employee's name") String name){
-        logger.info("Searching for supervisor and supervisor's supervisor of the employee '{}'", name);
-        return hierarchyService.searchForSupervisors(name).toMap();
+    public Map<String,Object> getSupervisors(@RequestBody @Valid EmployeeDTO employeeDTO){
+        Employee employee = modelMapper.map(employeeDTO, Employee.class);
+        logger.info("Searching for supervisor and supervisor's supervisor of the employee '{}'", employee.getName());
+        return hierarchyService.searchForSupervisors(employee).toMap();
     }
 
 

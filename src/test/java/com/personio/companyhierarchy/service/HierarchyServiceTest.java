@@ -1,21 +1,15 @@
 package com.personio.companyhierarchy.service;
 
-import com.google.gson.Gson;
-import com.personio.companyhierarchy.dto.EmployeeDTO;
 import com.personio.companyhierarchy.entity.Employee;
 import com.personio.companyhierarchy.exception.ApiExceptions;
-import com.personio.companyhierarchy.exception.ErrorConstants;
 import com.personio.companyhierarchy.repository.EmployeeRepository;
-import org.assertj.core.api.Assert;
 import org.assertj.core.api.Assertions;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -195,7 +189,7 @@ public class HierarchyServiceTest {
         Mockito.when(employeeRepository.findSupervisorAndSupervisorsSupervisorFromGivenName(employee.getName()))
                 .thenReturn(hierarchy);
 
-        JSONObject companyHierarchy = hierarchyService.searchForSupervisors(employee.getName());         // Execution
+        JSONObject companyHierarchy = hierarchyService.searchForSupervisors(employee);         // Execution
 
         assertThat(companyHierarchy).isNotNull();           // The returned object is not null
         String json = companyHierarchy.toString();
@@ -213,7 +207,7 @@ public class HierarchyServiceTest {
         Mockito.when(employeeRepository.findSupervisorAndSupervisorsSupervisorFromGivenName(Mockito.anyString()))
                 .thenReturn(new ArrayList<Employee>());     // Return an empty list
 
-        JSONObject companyHierarchy = hierarchyService.searchForSupervisors(employee.getName());         // Execution
+        JSONObject companyHierarchy = hierarchyService.searchForSupervisors(employee);         // Execution
         String json = companyHierarchy.toString();
 
         assertThat(companyHierarchy).isNotNull();           // The returned object is not null

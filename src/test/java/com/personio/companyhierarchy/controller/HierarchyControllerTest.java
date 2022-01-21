@@ -1,44 +1,30 @@
 package com.personio.companyhierarchy.controller;
 
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.personio.companyhierarchy.dto.EmployeeDTO;
 import com.personio.companyhierarchy.entity.Employee;
-import com.personio.companyhierarchy.exception.ApiErrors;
 import com.personio.companyhierarchy.exception.ErrorConstants;
 import com.personio.companyhierarchy.security.WebSecurityConfig;
 import com.personio.companyhierarchy.service.HierarchyService;
-import org.json.JSONException;
 
 import org.json.JSONObject;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.BDDMockito;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.hamcrest.Matchers;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 
 
 import java.util.*;
@@ -221,7 +207,7 @@ public class HierarchyControllerTest {
         employeeDTO1.getSubordinates().add(employeeDTO2);               // Bound the relations
         employeeDTO2.getSubordinates().add(employeeDTO3);               // Bound the relations
 
-        BDDMockito.given(service.searchForSupervisors(emp.getName()))             // Mock the service method's call
+        BDDMockito.given(service.searchForSupervisors(emp))             // Mock the service method's call
                 .willReturn(printEmployeeTree(employeeDTO1));
 
 
@@ -244,7 +230,7 @@ public class HierarchyControllerTest {
 
         Employee emp = new Employee(null, "Barbara", null);
 
-        BDDMockito.given(service.searchForSupervisors(emp.getName()))             // Mock the service method's call
+        BDDMockito.given(service.searchForSupervisors(emp))             // Mock the service method's call
                 .willReturn(new JSONObject("{}"));
 
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get(PERSONIO_API)
