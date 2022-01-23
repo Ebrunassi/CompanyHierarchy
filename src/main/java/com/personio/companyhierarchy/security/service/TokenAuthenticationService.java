@@ -16,8 +16,7 @@ import java.util.Date;
 
 public class TokenAuthenticationService {
 
-    // EXPIRATION_TIME = 10 dias
-    static final long EXPIRATION_TIME = 2 * 60 * 60 * 1000;
+    static final long EXPIRATION_TIME = 5 * 60 * 60 * 1000;     // 5 hours
     static final String SECRET = "P3rs0N!02o2s";
     static final String TOKEN_PREFIX = "Bearer";
     static final String HEADER_STRING = "Authorization";
@@ -44,7 +43,6 @@ public class TokenAuthenticationService {
         try {
             String token = request.getHeader(HEADER_STRING);
             if (token != null) {
-                // faz parse do token
                 String user = Jwts.parser()
                         .setSigningKey(SECRET)
                         .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
@@ -65,7 +63,6 @@ public class TokenAuthenticationService {
         try {
 
             if (token != null) {
-                // faz parse do token
                 String user = Jwts.parser()
                         .setSigningKey(SECRET)
                         .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
