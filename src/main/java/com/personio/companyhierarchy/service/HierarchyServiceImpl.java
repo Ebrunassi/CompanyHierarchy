@@ -208,6 +208,7 @@ public class HierarchyServiceImpl implements HierarchyService{
         buildEmployeeTree(employees, employeeDTOTree);                             // Build a tree based on the HashMap
         if(treeHeight-1 != employees.size()) {                  // Removing the root in the count
             logger.error("There is a loop in the hierarchy.");
+            treeHeight = 0;
             throw ErrorConstants.LOOP_SUPERVISORS;
         }
         logger.info("Strucutre tree: " + gson.toJson(employeeDTOTree));

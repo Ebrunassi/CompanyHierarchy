@@ -1699,3 +1699,1108 @@ INFO  2022-01-23 20:06:50.552 [http-nio-8080-exec-2] HierarchyServiceImpl - Retu
 INFO  2022-01-23 20:11:47.802 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 INFO  2022-01-23 20:11:47.810 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
 INFO  2022-01-23 20:11:47.821 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-23 20:57:47.452 [main] AbstractTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.personio.companyhierarchy.controller.HierarchyControllerTest], using SpringBootContextLoader
+INFO  2022-01-23 20:57:47.476 [main] AbstractContextLoader - Could not detect default resource locations for test class [com.personio.companyhierarchy.controller.HierarchyControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+INFO  2022-01-23 20:57:47.477 [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.personio.companyhierarchy.controller.HierarchyControllerTest]: HierarchyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+INFO  2022-01-23 20:57:47.840 [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.personio.companyhierarchy.CompanyHierarchyApplication for test class com.personio.companyhierarchy.controller.HierarchyControllerTest
+INFO  2022-01-23 20:57:47.848 [main] AbstractTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+INFO  2022-01-23 20:57:47.885 [main] AbstractTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d2644e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4fa06f52, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@602c4656, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5ffc5491, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@705202d1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3c443976, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e58d65e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3bd55d8, org.springframework.test.context.event.EventPublishingTestExecutionListener@63998bf4, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7e0b9178, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@61942c1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6f63c44f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@408a247c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@62a8fd44, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2e6ba49a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5f5b5ca4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4ee33af7]
+INFO  2022-01-23 20:57:48.453 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-23 20:57:48.525 [main] StartupInfoLogger - Starting HierarchyControllerTest using Java 11.0.1 on solomon with PID 49332 (started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-23 20:57:48.531 [main] SpringApplication - The following profiles are active: test
+INFO  2022-01-23 20:57:51.311 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 06a62ed9-bd3d-4cde-9cd9-9c9b1285b4d6
+
+INFO  2022-01-23 20:57:51.494 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-23 20:57:51.495 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-23 20:57:51.495 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-23 20:57:51.497 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-23 20:57:51.498 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-23 20:57:51.499 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-23 20:57:51.746 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fde1d64, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e28dc96, org.springframework.security.web.header.HeaderWriterFilter@52cb52bd, org.springframework.security.web.authentication.logout.LogoutFilter@70f4abc1, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@5350ab17, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e07b4db, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@273aaab7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@984de01, org.springframework.security.web.session.SessionManagementFilter@2b6262bc, org.springframework.security.web.access.ExceptionTranslationFilter@7afb9c93, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4afdfc0f]
+INFO  2022-01-23 20:57:53.632 [main] MockServletContext - Initializing Spring TestDispatcherServlet ''
+INFO  2022-01-23 20:57:53.637 [main] FrameworkServlet - Initializing Servlet ''
+INFO  2022-01-23 20:57:53.641 [main] FrameworkServlet - Completed initialization in 2 ms
+INFO  2022-01-23 20:57:53.677 [main] StartupInfoLogger - Started HierarchyControllerTest in 5.636 seconds (JVM running for 8.97)
+INFO  2022-01-23 20:57:53.751 [main] ErrorConstants - The employee 'Barbara' must not have more than one supervisor.
+INFO  2022-01-23 20:57:53.824 [main] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Barbara": "Nick", 
+	"Sophie": "Jonas",
+	"Nick":"Barbara",
+	"Barbara":"Jonas"
+}
+INFO  2022-01-23 20:57:54.008 [main] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Barbara": "Nick", 
+	"Sophie": "Jonas",
+	"Nick":"Barbara"
+}
+INFO  2022-01-23 20:57:54.296 [main] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Barbara'
+INFO  2022-01-23 20:57:54.326 [main] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Barbara'
+INFO  2022-01-23 20:57:54.372 [main] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Barbara": "Nick", 
+	"Nick": "Sophie", 
+	"Sophie": "Jonas",
+	"Luke":"Paul"
+}
+INFO  2022-01-23 20:57:54.400 [main] HierarchyController - Creating a new hierarchy. Submitted structure: {	 
+	"Sophie": "Jonas",
+	"Nick":"Barbara",
+	"Barbara":"Jonas",
+	"Paul":"John"
+}
+INFO  2022-01-23 20:57:54.439 [main] HierarchyController - Creating a new hierarchy. Submitted structure: {	 
+	"Sophie": "Jonas",
+	"Nick":"Barbara",
+	"Barbara":"Jonas",
+	"Jonas":"Nick"
+}
+INFO  2022-01-23 20:57:54.502 [main] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Barbara": "Nick", 
+	"Nick": "Sophie", 
+	"Sophie": "Jonas"
+}
+INFO  2022-01-23 20:58:08.144 [main] AbstractTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.personio.companyhierarchy.repository.EmployeeRepositoryTest], using SpringBootContextLoader
+INFO  2022-01-23 20:58:08.154 [main] AbstractContextLoader - Could not detect default resource locations for test class [com.personio.companyhierarchy.repository.EmployeeRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+INFO  2022-01-23 20:58:08.155 [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.personio.companyhierarchy.repository.EmployeeRepositoryTest]: EmployeeRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+INFO  2022-01-23 20:58:08.326 [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.personio.companyhierarchy.CompanyHierarchyApplication for test class com.personio.companyhierarchy.repository.EmployeeRepositoryTest
+INFO  2022-01-23 20:58:08.331 [main] AbstractTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+INFO  2022-01-23 20:58:08.356 [main] AbstractTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7da10b5b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@219f4597, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@31be6b49, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2e16b08d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5b989dc7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@70d8de, org.springframework.test.context.transaction.TransactionalTestExecutionListener@42561fba, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@595f4da5, org.springframework.test.context.event.EventPublishingTestExecutionListener@46b695ec, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@408613cc, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@325f7fa9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@11ce2e22, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@63a5d002, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13cda7c9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5aa6202e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3af9aa66, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@771158fb]
+INFO  2022-01-23 20:58:08.847 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-23 20:58:08.876 [main] StartupInfoLogger - Starting EmployeeRepositoryTest using Java 11.0.1 on solomon with PID 49437 (started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-23 20:58:08.880 [main] SpringApplication - The following profiles are active: test
+INFO  2022-01-23 20:58:09.700 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-23 20:58:09.776 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-23 20:58:09.857 [main] TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+INFO  2022-01-23 20:58:10.089 [main] EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:45cea566-a46c-4a8e-9460-fae7beccc452;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+INFO  2022-01-23 20:58:10.551 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-23 20:58:10.614 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-23 20:58:10.828 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-23 20:58:10.987 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-23 20:58:11.811 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-23 20:58:11.823 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-23 20:58:12.542 [main] StartupInfoLogger - Started EmployeeRepositoryTest in 4.121 seconds (JVM running for 7.308)
+INFO  2022-01-23 20:58:12.580 [main] TransactionContext - Began transaction (1) for test context [DefaultTestContext@7ce4498f testClass = EmployeeRepositoryTest, testInstance = com.personio.companyhierarchy.repository.EmployeeRepositoryTest@1f7557fe, testMethod = notFoundEmployeeByName@EmployeeRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7bd7d71c testClass = EmployeeRepositoryTest, locations = '{}', classes = '{class com.personio.companyhierarchy.CompanyHierarchyApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@52963839 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@e3cee7b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@408b35bf, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7249dadf, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@750fe12e, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ce153d36, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@cc62a3b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@2a6c751f]; rollback [true]
+INFO  2022-01-23 20:58:12.756 [main] TransactionContext - Rolled back transaction for test: [DefaultTestContext@7ce4498f testClass = EmployeeRepositoryTest, testInstance = com.personio.companyhierarchy.repository.EmployeeRepositoryTest@1f7557fe, testMethod = notFoundEmployeeByName@EmployeeRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7bd7d71c testClass = EmployeeRepositoryTest, locations = '{}', classes = '{class com.personio.companyhierarchy.CompanyHierarchyApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@52963839 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@e3cee7b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@408b35bf, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7249dadf, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@750fe12e, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ce153d36, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@cc62a3b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+INFO  2022-01-23 20:58:12.769 [main] TransactionContext - Began transaction (1) for test context [DefaultTestContext@7ce4498f testClass = EmployeeRepositoryTest, testInstance = com.personio.companyhierarchy.repository.EmployeeRepositoryTest@5e41e6ad, testMethod = saveEmployeeSuccessfully@EmployeeRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7bd7d71c testClass = EmployeeRepositoryTest, locations = '{}', classes = '{class com.personio.companyhierarchy.CompanyHierarchyApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@52963839 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@e3cee7b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@408b35bf, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7249dadf, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@750fe12e, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ce153d36, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@cc62a3b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@2a6c751f]; rollback [true]
+INFO  2022-01-23 20:58:12.833 [main] TransactionContext - Rolled back transaction for test: [DefaultTestContext@7ce4498f testClass = EmployeeRepositoryTest, testInstance = com.personio.companyhierarchy.repository.EmployeeRepositoryTest@5e41e6ad, testMethod = saveEmployeeSuccessfully@EmployeeRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7bd7d71c testClass = EmployeeRepositoryTest, locations = '{}', classes = '{class com.personio.companyhierarchy.CompanyHierarchyApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@52963839 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@e3cee7b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@408b35bf, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7249dadf, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@750fe12e, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ce153d36, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@cc62a3b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+INFO  2022-01-23 20:58:12.848 [main] TransactionContext - Began transaction (1) for test context [DefaultTestContext@7ce4498f testClass = EmployeeRepositoryTest, testInstance = com.personio.companyhierarchy.repository.EmployeeRepositoryTest@7d2baa56, testMethod = findEmployeeByNameSuccessfully@EmployeeRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7bd7d71c testClass = EmployeeRepositoryTest, locations = '{}', classes = '{class com.personio.companyhierarchy.CompanyHierarchyApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@52963839 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@e3cee7b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@408b35bf, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7249dadf, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@750fe12e, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ce153d36, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@cc62a3b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@2a6c751f]; rollback [true]
+INFO  2022-01-23 20:58:12.870 [main] TransactionContext - Rolled back transaction for test: [DefaultTestContext@7ce4498f testClass = EmployeeRepositoryTest, testInstance = com.personio.companyhierarchy.repository.EmployeeRepositoryTest@7d2baa56, testMethod = findEmployeeByNameSuccessfully@EmployeeRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7bd7d71c testClass = EmployeeRepositoryTest, locations = '{}', classes = '{class com.personio.companyhierarchy.CompanyHierarchyApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@52963839 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@e3cee7b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@408b35bf, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7249dadf, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@750fe12e, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ce153d36, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@cc62a3b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+INFO  2022-01-23 20:58:12.898 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-23 20:58:25.197 [main] AbstractTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.personio.companyhierarchy.service.HierarchyServiceTest], using DelegatingSmartContextLoader
+INFO  2022-01-23 20:58:25.212 [main] AbstractContextLoader - Could not detect default resource locations for test class [com.personio.companyhierarchy.service.HierarchyServiceTest]: no resource found for suffixes {-context.xml}.
+INFO  2022-01-23 20:58:25.214 [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.personio.companyhierarchy.service.HierarchyServiceTest]: HierarchyServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+INFO  2022-01-23 20:58:25.300 [main] AbstractTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+INFO  2022-01-23 20:58:25.324 [main] AbstractTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5ea502e0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@443dbe42, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@473b3b7a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1734f68, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@77b7ffa4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5ed190be, org.springframework.test.context.transaction.TransactionalTestExecutionListener@402f80f5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5bbc9f97, org.springframework.test.context.event.EventPublishingTestExecutionListener@133e019b, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@41382722, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@7dac3fd8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@425357dd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2102a4d5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@210386e0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3d4d3fe7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@65f87a2c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@51684e4a]
+INFO  2022-01-23 20:58:26.566 [main] HierarchyServiceImpl - It was found 0 employees related to 'Barbara'
+INFO  2022-01-23 20:58:26.677 [main] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 20:58:26.678 [main] HierarchyServiceImpl - Boss founded: Jonas
+INFO  2022-01-23 20:58:26.679 [main] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 3
+INFO  2022-01-23 20:58:26.680 [main] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 20:58:26.701 [main] HierarchyServiceImpl - Strucutre tree: {"name":"Jonas","subordinates":[{"name":"Sophie","subordinates":[]},{"name":"Barbara","subordinates":[{"name":"Nick","subordinates":[]}]}]}
+INFO  2022-01-23 20:58:26.702 [main] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 20:58:26.721 [main] HierarchyServiceImpl - Saved into database: {"employeeId":1,"name":"Jonas"}
+INFO  2022-01-23 20:58:26.723 [main] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Jonas"}
+INFO  2022-01-23 20:58:26.724 [main] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Jonas"}
+INFO  2022-01-23 20:58:26.725 [main] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Jonas"}
+INFO  2022-01-23 20:58:26.727 [main] HierarchyServiceImpl - Returning response: {"Jonas":{"Sophie":{},"Barbara":{"Nick":{}}}}
+INFO  2022-01-23 20:58:26.752 [main] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 20:58:26.753 [main] HierarchyServiceImpl - Boss founded: Jonas
+INFO  2022-01-23 20:58:26.754 [main] HierarchyServiceImpl - Boss founded: Paul
+ERROR 2022-01-23 20:58:26.754 [main] HierarchyServiceImpl - There are more than one boss found in this structure.
+INFO  2022-01-23 20:58:26.776 [main] HierarchyServiceImpl - It was found 3 employees related to 'Barbara'
+INFO  2022-01-23 20:58:26.777 [main] HierarchyServiceImpl - Supervisors of 'Barbara' found in database: {"name":"Sophie","subordinates":[{"name":"Nick","subordinates":[{"name":"Barbara","subordinates":[]}]}]}
+INFO  2022-01-23 20:58:26.779 [main] HierarchyServiceImpl - Returning response: {"Sophie":{"Nick":{"Barbara":{}}}}
+INFO  2022-01-23 20:58:26.799 [main] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 20:58:26.801 [main] HierarchyServiceImpl - Boss founded: Jonas
+ERROR 2022-01-23 20:58:26.801 [main] HierarchyServiceImpl - There is a loop relation between 'Nick' and 'Barbara'
+INFO  2022-01-23 20:58:26.831 [main] ErrorConstants - The employee 'Barbara' must not have more than one supervisor.
+INFO  2022-01-23 20:58:26.852 [main] HierarchyServiceImpl - Finding the boss of the structure...
+ERROR 2022-01-23 20:58:26.853 [main] HierarchyServiceImpl - There is no boss in this structure.
+INFO  2022-01-23 21:23:59.066 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-23 21:23:59.164 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 55213 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-23 21:23:59.175 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-23 21:24:01.691 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-23 21:24:01.797 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-23 21:24:03.374 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-23 21:24:03.395 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-23 21:24:03.396 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-23 21:24:03.397 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-23 21:24:03.587 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-23 21:24:03.588 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4314 ms
+INFO  2022-01-23 21:24:04.374 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-23 21:24:04.480 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-23 21:24:04.783 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-23 21:24:04.982 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-23 21:24:05.451 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-23 21:24:05.494 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-23 21:24:06.754 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-23 21:24:06.771 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-23 21:24:07.912 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-23 21:24:08.130 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0aea0612-664e-4c40-8aa9-eeb0cbcba0e7
+
+INFO  2022-01-23 21:24:08.357 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-23 21:24:08.358 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-23 21:24:08.358 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-23 21:24:08.359 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-23 21:24:08.359 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-23 21:24:08.360 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-23 21:24:08.518 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d729af6, org.springframework.security.web.context.SecurityContextPersistenceFilter@144fc5fa, org.springframework.security.web.header.HeaderWriterFilter@44233014, org.springframework.security.web.authentication.logout.LogoutFilter@16c3388e, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@2052c49f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@299e245c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3423f353, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2be83e7e, org.springframework.security.web.session.SessionManagementFilter@34de8c9f, org.springframework.security.web.access.ExceptionTranslationFilter@6f7e5e11, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f9a5d3b]
+INFO  2022-01-23 21:24:11.706 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-23 21:24:11.790 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-23 21:24:11.832 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-23 21:24:11.871 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 13.495 seconds (JVM running for 16.078)
+INFO  2022-01-23 21:25:55.540 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-23 21:25:55.541 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-23 21:25:55.546 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 3 ms
+INFO  2022-01-23 21:25:55.816 [http-nio-8080-exec-1] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",
+	"Evandro": "Pedro",
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie"
+}
+INFO  2022-01-23 21:25:55.820 [http-nio-8080-exec-1] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:25:55.821 [http-nio-8080-exec-1] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:25:55.822 [http-nio-8080-exec-1] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 5
+INFO  2022-01-23 21:25:55.824 [http-nio-8080-exec-1] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:26:15.149 [http-nio-8080-exec-1] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Pedro","subordinates":[{"name":"Evandro","subordinates":[]}]}]}
+INFO  2022-01-23 21:26:15.150 [http-nio-8080-exec-1] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:26:15.400 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:26:15.430 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:26:15.441 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+INFO  2022-01-23 21:26:15.449 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:26:15.457 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":22,"name":"Pedro","managerId":9}
+INFO  2022-01-23 21:26:15.469 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":22}
+INFO  2022-01-23 21:26:15.471 [http-nio-8080-exec-1] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}},"Pedro":{"Evandro":{}}}}
+INFO  2022-01-23 21:26:24.742 [http-nio-8080-exec-2] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",
+	"Evandro": "Pedro",
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie",
+"Rony":"Stephanie"
+}
+INFO  2022-01-23 21:26:24.742 [http-nio-8080-exec-2] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:26:24.743 [http-nio-8080-exec-2] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:26:24.743 [http-nio-8080-exec-2] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 6
+INFO  2022-01-23 21:26:24.744 [http-nio-8080-exec-2] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:26:29.966 [http-nio-8080-exec-2] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Pedro","subordinates":[{"name":"Evandro","subordinates":[]}]},{"name":"Rony","subordinates":[]}]}
+INFO  2022-01-23 21:26:29.969 [http-nio-8080-exec-2] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:26:29.974 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:26:29.979 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:26:29.982 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+INFO  2022-01-23 21:26:29.985 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:26:29.989 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":22,"name":"Pedro","managerId":9}
+INFO  2022-01-23 21:26:29.992 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":22}
+INFO  2022-01-23 21:26:29.996 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":34,"name":"Rony","managerId":9}
+INFO  2022-01-23 21:26:29.997 [http-nio-8080-exec-2] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}},"Pedro":{"Evandro":{}},"Rony":{}}}
+INFO  2022-01-23 21:26:34.522 [http-nio-8080-exec-3] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",
+	"Evandro": "Pedro",
+	"Nathalia":"Lucas"
+}
+INFO  2022-01-23 21:26:34.522 [http-nio-8080-exec-3] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:26:34.522 [http-nio-8080-exec-3] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:26:34.523 [http-nio-8080-exec-3] HierarchyServiceImpl - Boss founded: Pedro
+ERROR 2022-01-23 21:26:34.524 [http-nio-8080-exec-3] HierarchyServiceImpl - There are more than one boss found in this structure.
+INFO  2022-01-23 21:26:47.084 [http-nio-8080-exec-4] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",	
+	"Nathalia":"Lucas"
+}
+INFO  2022-01-23 21:26:47.086 [http-nio-8080-exec-4] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:26:47.087 [http-nio-8080-exec-4] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:26:47.090 [http-nio-8080-exec-4] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 3
+INFO  2022-01-23 21:26:47.091 [http-nio-8080-exec-4] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:27:21.704 [http-nio-8080-exec-4] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]}]}
+INFO  2022-01-23 21:27:21.705 [http-nio-8080-exec-4] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:27:21.720 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:27:21.727 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:27:21.727 [http-nio-8080-exec-5] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Evandro": "Pedro",
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",	
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie"
+}
+INFO  2022-01-23 21:27:21.728 [http-nio-8080-exec-5] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:27:21.728 [http-nio-8080-exec-5] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:27:21.729 [http-nio-8080-exec-5] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 5
+INFO  2022-01-23 21:27:21.729 [http-nio-8080-exec-5] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:27:25.570 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+ERROR 2022-01-23 21:27:25.571 [http-nio-8080-exec-5] HierarchyServiceImpl - There is a loop in the hierarchy.
+INFO  2022-01-23 21:27:25.574 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:27:25.575 [http-nio-8080-exec-4] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}}}}
+INFO  2022-01-23 21:27:30.952 [http-nio-8080-exec-6] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Evandro": "Pedro",
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",	
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie"
+}
+INFO  2022-01-23 21:27:30.954 [http-nio-8080-exec-6] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:27:30.956 [http-nio-8080-exec-6] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:27:30.957 [http-nio-8080-exec-6] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 5
+INFO  2022-01-23 21:27:30.958 [http-nio-8080-exec-6] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:27:45.894 [http-nio-8080-exec-6] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Pedro","subordinates":[{"name":"Evandro","subordinates":[]}]}]}
+INFO  2022-01-23 21:27:45.895 [http-nio-8080-exec-6] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:27:45.901 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:27:45.905 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:27:45.906 [http-nio-8080-exec-7] HierarchyController - Creating a new hierarchy. Submitted structure: {
+    "Pete": "Nick",
+    "Barbara": "Nick",
+    "Nick": "Sophie",
+    "Sophie": "Jonas",
+    "Regina": "Nathalia",
+    "Aurelio": "Regina",
+    "Nathalia": "Stephanie",
+    "Jonas": "Stephanie",
+    "Stephanie": "Evandro",
+    "Lucas": "Regina",
+    "Alberto": "Edna",
+    "Leonardo": "AnaJulia",
+    "AnaJulia": "Alberto",
+    "Juninho": "Leonardo",
+    "Sophia": "Leonardo",
+    "Edna": "Evandro",
+    "Louro": "Edna"
+}
+
+INFO  2022-01-23 21:27:45.907 [http-nio-8080-exec-7] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:27:45.907 [http-nio-8080-exec-7] HierarchyServiceImpl - Boss founded: Evandro
+INFO  2022-01-23 21:27:45.907 [http-nio-8080-exec-7] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 17
+INFO  2022-01-23 21:27:45.908 [http-nio-8080-exec-7] HierarchyServiceImpl - Converting the structure into a tree...
+ERROR 2022-01-23 21:27:47.672 [http-nio-8080-exec-7] HierarchyServiceImpl - There is a loop in the hierarchy.
+INFO  2022-01-23 21:27:47.676 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+INFO  2022-01-23 21:27:47.681 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:27:47.690 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":22,"name":"Pedro","managerId":9}
+INFO  2022-01-23 21:27:47.694 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":22}
+INFO  2022-01-23 21:27:47.695 [http-nio-8080-exec-6] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}},"Pedro":{"Evandro":{}}}}
+INFO  2022-01-23 21:28:02.073 [http-nio-8080-exec-8] HierarchyController - Creating a new hierarchy. Submitted structure: {
+    "Pete": "Nick",
+    "Barbara": "Nick",
+    "Nick": "Sophie",
+    "Sophie": "Jonas",
+    "Regina": "Nathalia",
+    "Aurelio": "Regina",
+    "Nathalia": "Stephanie",
+    "Jonas": "Stephanie",
+    "Stephanie": "Evandro",
+    "Lucas": "Regina",
+    "Alberto": "Edna",
+    "Leonardo": "AnaJulia",
+    "AnaJulia": "Alberto",
+    "Juninho": "Leonardo",
+    "Sophia": "Leonardo",
+    "Edna": "Evandro",
+    "Louro": "Edna"
+}
+
+INFO  2022-01-23 21:28:02.074 [http-nio-8080-exec-8] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:28:02.074 [http-nio-8080-exec-8] HierarchyServiceImpl - Boss founded: Evandro
+INFO  2022-01-23 21:28:02.075 [http-nio-8080-exec-8] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 17
+INFO  2022-01-23 21:28:02.075 [http-nio-8080-exec-8] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:28:10.693 [http-nio-8080-exec-8] HierarchyServiceImpl - Strucutre tree: {"name":"Evandro","subordinates":[{"name":"Edna","subordinates":[{"name":"Alberto","subordinates":[{"name":"AnaJulia","subordinates":[{"name":"Leonardo","subordinates":[{"name":"Juninho","subordinates":[]},{"name":"Sophia","subordinates":[]}]}]}]},{"name":"Louro","subordinates":[]}]},{"name":"Stephanie","subordinates":[{"name":"Nathalia","subordinates":[{"name":"Regina","subordinates":[{"name":"Lucas","subordinates":[]},{"name":"Aurelio","subordinates":[]}]}]},{"name":"Jonas","subordinates":[{"name":"Sophie","subordinates":[{"name":"Nick","subordinates":[{"name":"Pete","subordinates":[]},{"name":"Barbara","subordinates":[]}]}]}]}]}]}
+INFO  2022-01-23 21:28:10.697 [http-nio-8080-exec-8] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:28:10.716 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into database: {"employeeId":1,"name":"Evandro"}
+INFO  2022-01-23 21:28:10.763 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":1}
+INFO  2022-01-23 21:28:10.780 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":3,"name":"Alberto","managerId":2}
+INFO  2022-01-23 21:28:10.796 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":4,"name":"AnaJulia","managerId":3}
+INFO  2022-01-23 21:28:10.814 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":4}
+INFO  2022-01-23 21:28:10.828 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":6,"name":"Juninho","managerId":5}
+INFO  2022-01-23 21:28:10.841 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":7,"name":"Sophia","managerId":5}
+INFO  2022-01-23 21:28:10.853 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":8,"name":"Louro","managerId":2}
+INFO  2022-01-23 21:28:10.868 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":9,"name":"Stephanie","managerId":1}
+INFO  2022-01-23 21:28:10.883 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":9}
+INFO  2022-01-23 21:28:10.902 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":10}
+INFO  2022-01-23 21:28:10.921 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":11}
+INFO  2022-01-23 21:28:10.933 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":13,"name":"Aurelio","managerId":11}
+INFO  2022-01-23 21:28:10.946 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":14,"name":"Jonas","managerId":9}
+INFO  2022-01-23 21:28:10.959 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":15,"name":"Sophie","managerId":14}
+INFO  2022-01-23 21:28:10.972 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":16,"name":"Nick","managerId":15}
+INFO  2022-01-23 21:28:10.983 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":17,"name":"Pete","managerId":16}
+INFO  2022-01-23 21:28:10.999 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":18,"name":"Barbara","managerId":16}
+INFO  2022-01-23 21:28:11.004 [http-nio-8080-exec-8] HierarchyServiceImpl - Returning response: {"Evandro":{"Edna":{"Alberto":{"AnaJulia":{"Leonardo":{"Juninho":{},"Sophia":{}}}},"Louro":{}},"Stephanie":{"Nathalia":{"Regina":{"Lucas":{},"Aurelio":{}}},"Jonas":{"Sophie":{"Nick":{"Pete":{},"Barbara":{}}}}}}}
+INFO  2022-01-23 21:28:11.093 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-23 21:28:11.100 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-23 21:28:11.119 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-23 21:28:17.219 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-23 21:28:17.299 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 55475 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-23 21:28:17.318 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-23 21:28:21.595 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-23 21:28:21.818 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 179 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-23 21:28:24.255 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-23 21:28:24.284 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-23 21:28:24.287 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-23 21:28:24.288 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-23 21:28:24.704 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-23 21:28:24.705 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7202 ms
+INFO  2022-01-23 21:28:25.931 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-23 21:28:26.092 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-23 21:28:26.531 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-23 21:28:26.904 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-23 21:28:27.415 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-23 21:28:27.448 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-23 21:28:30.752 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-23 21:28:30.791 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-23 21:28:33.154 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-23 21:28:33.600 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5de448ab-13c1-466a-94c2-65f7f7c45ec3
+
+INFO  2022-01-23 21:28:33.921 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-23 21:28:33.923 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-23 21:28:33.925 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-23 21:28:33.926 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-23 21:28:33.941 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-23 21:28:33.942 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-23 21:28:34.127 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7aff1db3, org.springframework.security.web.context.SecurityContextPersistenceFilter@308f18c0, org.springframework.security.web.header.HeaderWriterFilter@6f28a07e, org.springframework.security.web.authentication.logout.LogoutFilter@c509742, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@46374b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fcef6f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c0989f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29ceefb3, org.springframework.security.web.session.SessionManagementFilter@7d8c264, org.springframework.security.web.access.ExceptionTranslationFilter@35c69e6b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@730611a0]
+INFO  2022-01-23 21:28:39.230 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-23 21:28:39.327 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-23 21:28:39.442 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-23 21:28:39.475 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 22.838 seconds (JVM running for 25.703)
+INFO  2022-01-23 21:28:40.901 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-23 21:28:40.902 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-23 21:28:40.906 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 4 ms
+INFO  2022-01-23 21:28:41.107 [http-nio-8080-exec-1] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",
+	"Evandro": "Pedro",
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie"
+}
+INFO  2022-01-23 21:28:41.115 [http-nio-8080-exec-1] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:28:41.116 [http-nio-8080-exec-1] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:28:41.116 [http-nio-8080-exec-1] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 5
+INFO  2022-01-23 21:28:41.118 [http-nio-8080-exec-1] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:28:48.010 [http-nio-8080-exec-1] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Pedro","subordinates":[{"name":"Evandro","subordinates":[]}]}]}
+INFO  2022-01-23 21:28:48.014 [http-nio-8080-exec-1] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:28:49.344 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:28:49.361 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:28:49.377 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+INFO  2022-01-23 21:28:49.392 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:28:49.404 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":22,"name":"Pedro","managerId":9}
+INFO  2022-01-23 21:28:49.425 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":22}
+INFO  2022-01-23 21:28:49.437 [http-nio-8080-exec-1] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}},"Pedro":{"Evandro":{}}}}
+INFO  2022-01-23 21:30:36.853 [http-nio-8080-exec-3] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo":"Ana Julia",	
+	"Nathalia":"Regina",
+    "Regina":"Alberto",
+    "Edna":"Alberto",
+    "Julia":"Edna"
+}
+INFO  2022-01-23 21:30:36.855 [http-nio-8080-exec-3] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:30:36.857 [http-nio-8080-exec-3] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:30:36.857 [http-nio-8080-exec-3] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 8
+INFO  2022-01-23 21:30:36.858 [http-nio-8080-exec-3] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:30:41.503 [http-nio-8080-exec-3] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:30:41.505 [http-nio-8080-exec-3] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:30:41.518 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:30:41.546 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:30:41.669 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:30:41.682 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:30:41.695 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:30:41.709 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:30:41.723 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:30:41.735 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:30:41.748 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:30:41.752 [http-nio-8080-exec-3] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:30:55.795 [http-nio-8080-exec-4] HierarchyController - Creating a new hierarchy. Submitted structure: {
+    "Pete": "Nick",
+    "Barbara": "Nick",
+    "Nick": "Sophie",
+    "Sophie": "Jonas",
+    "Regina": "Nathalia",
+    "Aurelio": "Regina",
+    "Nathalia": "Stephanie",
+    "Jonas": "Stephanie",
+    "Stephanie": "Evandro",
+    "Lucas": "Regina",
+    "Alberto": "Edna",
+    "Leonardo": "AnaJulia",
+    "AnaJulia": "Alberto",
+    "Juninho": "Leonardo",
+    "Sophia": "Leonardo",
+    "Edna": "Evandro",
+    "Louro": "Edna"
+}
+INFO  2022-01-23 21:30:55.796 [http-nio-8080-exec-4] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:30:55.797 [http-nio-8080-exec-4] HierarchyServiceImpl - Boss founded: Evandro
+INFO  2022-01-23 21:30:55.797 [http-nio-8080-exec-4] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 17
+INFO  2022-01-23 21:30:55.798 [http-nio-8080-exec-4] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:31:00.138 [http-nio-8080-exec-4] HierarchyServiceImpl - Strucutre tree: {"name":"Evandro","subordinates":[{"name":"Edna","subordinates":[{"name":"Alberto","subordinates":[{"name":"AnaJulia","subordinates":[{"name":"Leonardo","subordinates":[{"name":"Juninho","subordinates":[]},{"name":"Sophia","subordinates":[]}]}]}]},{"name":"Louro","subordinates":[]}]},{"name":"Stephanie","subordinates":[{"name":"Nathalia","subordinates":[{"name":"Regina","subordinates":[{"name":"Lucas","subordinates":[]},{"name":"Aurelio","subordinates":[]}]}]},{"name":"Jonas","subordinates":[{"name":"Sophie","subordinates":[{"name":"Nick","subordinates":[{"name":"Pete","subordinates":[]},{"name":"Barbara","subordinates":[]}]}]}]}]}]}
+INFO  2022-01-23 21:31:00.141 [http-nio-8080-exec-4] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:31:00.162 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into database: {"employeeId":1,"name":"Evandro"}
+INFO  2022-01-23 21:31:00.176 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":1}
+INFO  2022-01-23 21:31:00.196 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":3,"name":"Alberto","managerId":2}
+INFO  2022-01-23 21:31:00.205 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":4,"name":"AnaJulia","managerId":3}
+INFO  2022-01-23 21:31:00.219 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":4}
+INFO  2022-01-23 21:31:00.229 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":6,"name":"Juninho","managerId":5}
+INFO  2022-01-23 21:31:00.240 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":7,"name":"Sophia","managerId":5}
+INFO  2022-01-23 21:31:00.250 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":8,"name":"Louro","managerId":2}
+INFO  2022-01-23 21:31:00.266 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":9,"name":"Stephanie","managerId":1}
+INFO  2022-01-23 21:31:00.282 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":9}
+INFO  2022-01-23 21:31:00.296 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":10}
+INFO  2022-01-23 21:31:00.310 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":11}
+INFO  2022-01-23 21:31:00.320 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":13,"name":"Aurelio","managerId":11}
+INFO  2022-01-23 21:31:00.331 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":14,"name":"Jonas","managerId":9}
+INFO  2022-01-23 21:31:00.343 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":15,"name":"Sophie","managerId":14}
+INFO  2022-01-23 21:31:00.357 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":16,"name":"Nick","managerId":15}
+INFO  2022-01-23 21:31:00.369 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":17,"name":"Pete","managerId":16}
+INFO  2022-01-23 21:31:00.383 [http-nio-8080-exec-4] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":18,"name":"Barbara","managerId":16}
+INFO  2022-01-23 21:31:00.387 [http-nio-8080-exec-4] HierarchyServiceImpl - Returning response: {"Evandro":{"Edna":{"Alberto":{"AnaJulia":{"Leonardo":{"Juninho":{},"Sophia":{}}}},"Louro":{}},"Stephanie":{"Nathalia":{"Regina":{"Lucas":{},"Aurelio":{}}},"Jonas":{"Sophie":{"Nick":{"Pete":{},"Barbara":{}}}}}}}
+INFO  2022-01-23 21:31:06.531 [http-nio-8080-exec-5] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",
+	"Evandro": "Pedro",
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie"
+}
+INFO  2022-01-23 21:31:06.533 [http-nio-8080-exec-5] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:31:06.534 [http-nio-8080-exec-5] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:31:06.535 [http-nio-8080-exec-5] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 5
+INFO  2022-01-23 21:31:06.536 [http-nio-8080-exec-5] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:31:10.244 [http-nio-8080-exec-5] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Pedro","subordinates":[{"name":"Evandro","subordinates":[]}]}]}
+INFO  2022-01-23 21:31:10.246 [http-nio-8080-exec-5] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:31:10.260 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:31:10.269 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:31:10.284 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+INFO  2022-01-23 21:31:10.299 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:31:10.309 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":22,"name":"Pedro","managerId":9}
+INFO  2022-01-23 21:31:10.320 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":22}
+INFO  2022-01-23 21:31:10.324 [http-nio-8080-exec-5] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}},"Pedro":{"Evandro":{}}}}
+INFO  2022-01-23 21:31:18.723 [http-nio-8080-exec-6] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo":"Ana Julia",	
+	"Nathalia":"Regina",
+    "Regina":"Alberto",
+    "Edna":"Alberto",
+    "Julia":"Edna"
+}
+INFO  2022-01-23 21:31:18.725 [http-nio-8080-exec-6] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:31:18.726 [http-nio-8080-exec-6] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:31:18.727 [http-nio-8080-exec-6] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 8
+INFO  2022-01-23 21:31:18.728 [http-nio-8080-exec-6] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:31:31.935 [http-nio-8080-exec-6] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:31:31.936 [http-nio-8080-exec-6] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:31:31.944 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:31:31.952 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:31:31.956 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:31:31.963 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:31:31.973 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:31:31.982 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:31:31.988 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:31:31.996 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:31:32.005 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:31:32.005 [http-nio-8080-exec-6] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:31:40.949 [http-nio-8080-exec-7] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo":"Ana Julia",	
+	"Nathalia":"Regina",
+    "Regina":"Alberto",
+    "Edna":"Alberto",
+    "Julia":"Edna",
+	"Edna":"Julia"
+}
+INFO  2022-01-23 21:31:40.951 [http-nio-8080-exec-7] ErrorConstants - The employee 'Edna' must not have more than one supervisor.
+INFO  2022-01-23 21:31:46.116 [http-nio-8080-exec-8] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo":"Ana Julia",	
+	"Nathalia":"Regina",
+    "Regina":"Alberto",
+    "Edna":"Alberto",
+    "Julia":"Edna"
+}
+INFO  2022-01-23 21:31:46.117 [http-nio-8080-exec-8] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:31:46.118 [http-nio-8080-exec-8] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:31:46.118 [http-nio-8080-exec-8] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 8
+INFO  2022-01-23 21:31:46.119 [http-nio-8080-exec-8] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:31:55.282 [http-nio-8080-exec-8] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:31:55.286 [http-nio-8080-exec-8] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:31:55.296 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:31:55.306 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:31:55.314 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:31:55.325 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:31:55.336 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:31:55.346 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:31:55.358 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:31:55.370 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:31:55.381 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:31:55.386 [http-nio-8080-exec-8] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:32:22.003 [http-nio-8080-exec-9] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna",
+	"Alberto":"Leonardo"
+}
+INFO  2022-01-23 21:32:22.005 [http-nio-8080-exec-9] HierarchyServiceImpl - Finding the boss of the structure...
+ERROR 2022-01-23 21:32:22.006 [http-nio-8080-exec-9] HierarchyServiceImpl - There is no boss in this structure.
+INFO  2022-01-23 21:32:30.025 [http-nio-8080-exec-10] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",
+	"Evandro": "Pedro",
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie"
+}
+INFO  2022-01-23 21:32:30.026 [http-nio-8080-exec-10] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:32:30.027 [http-nio-8080-exec-10] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:32:30.027 [http-nio-8080-exec-10] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 5
+INFO  2022-01-23 21:32:30.028 [http-nio-8080-exec-10] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:32:36.846 [http-nio-8080-exec-10] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Pedro","subordinates":[{"name":"Evandro","subordinates":[]}]}]}
+INFO  2022-01-23 21:32:36.849 [http-nio-8080-exec-10] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:32:36.860 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:32:36.868 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:32:36.879 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+INFO  2022-01-23 21:32:36.892 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:32:36.901 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":22,"name":"Pedro","managerId":9}
+INFO  2022-01-23 21:32:36.916 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":22}
+INFO  2022-01-23 21:32:36.919 [http-nio-8080-exec-10] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}},"Pedro":{"Evandro":{}}}}
+INFO  2022-01-23 21:32:44.138 [http-nio-8080-exec-1] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo":"Ana Julia",	
+	"Nathalia":"Regina",
+    "Regina":"Alberto",
+    "Edna":"Alberto",
+    "Julia":"Edna"
+}
+INFO  2022-01-23 21:32:44.139 [http-nio-8080-exec-1] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:32:44.139 [http-nio-8080-exec-1] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:32:44.139 [http-nio-8080-exec-1] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 8
+INFO  2022-01-23 21:32:44.140 [http-nio-8080-exec-1] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:32:48.311 [http-nio-8080-exec-1] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:32:48.314 [http-nio-8080-exec-1] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:32:48.323 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:32:48.340 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:32:48.350 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:32:48.365 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:32:48.378 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:32:48.391 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:32:48.402 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:32:48.417 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:32:48.431 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:32:48.435 [http-nio-8080-exec-1] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:32:57.887 [http-nio-8080-exec-2] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna",
+	"Pedro":"Paul"
+}
+INFO  2022-01-23 21:32:57.887 [http-nio-8080-exec-2] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:32:57.887 [http-nio-8080-exec-2] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:32:57.888 [http-nio-8080-exec-2] HierarchyServiceImpl - Boss founded: Paul
+ERROR 2022-01-23 21:32:57.888 [http-nio-8080-exec-2] HierarchyServiceImpl - There are more than one boss found in this structure.
+INFO  2022-01-23 21:33:03.010 [http-nio-8080-exec-3] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna"
+}
+INFO  2022-01-23 21:33:03.011 [http-nio-8080-exec-3] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:33:03.012 [http-nio-8080-exec-3] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:33:03.012 [http-nio-8080-exec-3] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 8
+INFO  2022-01-23 21:33:03.013 [http-nio-8080-exec-3] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:33:06.856 [http-nio-8080-exec-3] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:33:06.858 [http-nio-8080-exec-3] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:33:06.870 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:33:06.880 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:33:06.890 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:33:06.900 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:33:06.909 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:33:06.919 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:33:06.928 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:33:06.940 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:33:06.951 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:33:06.956 [http-nio-8080-exec-3] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:34:19.731 [http-nio-8080-exec-5] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna",
+	"Paul":"Washer",
+	"Washer":"Piper"
+}
+INFO  2022-01-23 21:34:19.732 [http-nio-8080-exec-5] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:34:19.732 [http-nio-8080-exec-5] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:34:19.732 [http-nio-8080-exec-5] HierarchyServiceImpl - Boss founded: Piper
+ERROR 2022-01-23 21:34:19.734 [http-nio-8080-exec-5] HierarchyServiceImpl - There are more than one boss found in this structure.
+INFO  2022-01-23 21:34:26.581 [http-nio-8080-exec-6] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna"
+}
+INFO  2022-01-23 21:34:26.582 [http-nio-8080-exec-6] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:34:26.583 [http-nio-8080-exec-6] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:34:26.584 [http-nio-8080-exec-6] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 8
+INFO  2022-01-23 21:34:26.585 [http-nio-8080-exec-6] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:34:33.216 [http-nio-8080-exec-6] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:34:33.219 [http-nio-8080-exec-6] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:34:33.228 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:34:33.237 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:34:33.245 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:34:33.254 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:34:33.268 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:34:33.277 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:34:33.288 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:34:33.296 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:34:33.307 [http-nio-8080-exec-6] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:34:33.310 [http-nio-8080-exec-6] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:34:51.962 [http-nio-8080-exec-7] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna",
+	"Edna":"Julia"
+}
+INFO  2022-01-23 21:34:51.963 [http-nio-8080-exec-7] ErrorConstants - The employee 'Edna' must not have more than one supervisor.
+INFO  2022-01-23 21:35:02.307 [http-nio-8080-exec-8] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",
+	"Evandro": "Pedro",
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie"
+}
+INFO  2022-01-23 21:35:02.308 [http-nio-8080-exec-8] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:35:02.308 [http-nio-8080-exec-8] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:35:02.309 [http-nio-8080-exec-8] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 5
+INFO  2022-01-23 21:35:02.309 [http-nio-8080-exec-8] HierarchyServiceImpl - Converting the structure into a tree...
+WARN  2022-01-23 21:35:36.164 [HikariPool-1 housekeeper] HikariPool$HouseKeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m674ms770µs189ns).
+INFO  2022-01-23 21:35:36.167 [http-nio-8080-exec-8] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Pedro","subordinates":[{"name":"Evandro","subordinates":[]}]}]}
+INFO  2022-01-23 21:35:36.170 [http-nio-8080-exec-8] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:35:36.180 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:35:36.189 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:35:36.199 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+INFO  2022-01-23 21:35:36.214 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:35:36.226 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":22,"name":"Pedro","managerId":9}
+INFO  2022-01-23 21:35:36.246 [http-nio-8080-exec-8] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":22}
+INFO  2022-01-23 21:35:36.250 [http-nio-8080-exec-8] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}},"Pedro":{"Evandro":{}}}}
+INFO  2022-01-23 21:35:43.069 [http-nio-8080-exec-9] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo":"Ana Julia",	
+	"Nathalia":"Regina",
+    "Regina":"Alberto",
+    "Edna":"Alberto",
+    "Julia":"Edna"
+}
+INFO  2022-01-23 21:35:43.070 [http-nio-8080-exec-9] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:35:43.071 [http-nio-8080-exec-9] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:35:43.071 [http-nio-8080-exec-9] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 8
+INFO  2022-01-23 21:35:43.072 [http-nio-8080-exec-9] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:35:48.530 [http-nio-8080-exec-9] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:35:48.534 [http-nio-8080-exec-9] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:35:48.542 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:35:48.551 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:35:48.559 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:35:48.570 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:35:48.587 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:35:48.600 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:35:48.610 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:35:48.622 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:35:48.638 [http-nio-8080-exec-9] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:35:48.643 [http-nio-8080-exec-9] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:36:30.440 [http-nio-8080-exec-10] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna"
+}
+INFO  2022-01-23 21:36:30.441 [http-nio-8080-exec-10] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:36:30.442 [http-nio-8080-exec-10] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:36:30.443 [http-nio-8080-exec-10] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 8
+INFO  2022-01-23 21:36:30.443 [http-nio-8080-exec-10] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:36:33.727 [http-nio-8080-exec-10] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:36:33.728 [http-nio-8080-exec-10] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:36:33.735 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:36:33.744 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:36:33.750 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:36:33.755 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:36:33.761 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:36:33.767 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:36:33.773 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:36:33.779 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:36:33.784 [http-nio-8080-exec-10] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:36:33.785 [http-nio-8080-exec-10] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:36:45.207 [http-nio-8080-exec-1] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna",
+	"Fulano":"Alberto",
+	"Nao sei":"Alberto"
+}
+INFO  2022-01-23 21:36:45.208 [http-nio-8080-exec-1] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:36:45.209 [http-nio-8080-exec-1] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:36:45.209 [http-nio-8080-exec-1] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 10
+INFO  2022-01-23 21:36:45.210 [http-nio-8080-exec-1] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:36:47.168 [http-nio-8080-exec-1] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[]}]},{"name":"Fulano","subordinates":[]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Nao sei","subordinates":[]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:36:47.169 [http-nio-8080-exec-1] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:36:47.181 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:36:47.197 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:36:47.213 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:36:47.231 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":38,"name":"Fulano","managerId":3}
+INFO  2022-01-23 21:36:47.239 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:36:47.249 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:36:47.272 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:36:47.287 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:36:47.297 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":39,"name":"Nao sei","managerId":3}
+INFO  2022-01-23 21:36:47.304 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:36:47.335 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:36:47.337 [http-nio-8080-exec-1] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{}},"Fulano":{},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Nao sei":{},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:36:57.444 [http-nio-8080-exec-2] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Ana Julia": "Alberto",
+	"Evandro": "Alberto",
+	"Ste": "Evandro",
+	"Leonardo": "Ana Julia",
+	"Nathalia": "Regina",
+	"Regina": "Alberto",
+	"Edna": "Alberto",
+	"Julia": "Edna",
+	"Fulano":"Alberto",
+	"Nao sei":"Alberto",
+	"Oi":"Julia"
+}
+INFO  2022-01-23 21:36:57.445 [http-nio-8080-exec-2] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:36:57.446 [http-nio-8080-exec-2] HierarchyServiceImpl - Boss founded: Alberto
+INFO  2022-01-23 21:36:57.446 [http-nio-8080-exec-2] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 11
+INFO  2022-01-23 21:36:57.446 [http-nio-8080-exec-2] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:37:01.727 [http-nio-8080-exec-2] HierarchyServiceImpl - Strucutre tree: {"name":"Alberto","subordinates":[{"name":"Edna","subordinates":[{"name":"Julia","subordinates":[{"name":"Oi","subordinates":[]}]}]},{"name":"Fulano","subordinates":[]},{"name":"Regina","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Evandro","subordinates":[{"name":"Ste","subordinates":[]}]},{"name":"Nao sei","subordinates":[]},{"name":"Ana Julia","subordinates":[{"name":"Leonardo","subordinates":[]}]}]}
+INFO  2022-01-23 21:37:01.732 [http-nio-8080-exec-2] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:37:01.742 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into database: {"employeeId":3,"name":"Alberto"}
+INFO  2022-01-23 21:37:01.752 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":2,"name":"Edna","managerId":3}
+INFO  2022-01-23 21:37:01.760 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":35,"name":"Julia","managerId":2}
+INFO  2022-01-23 21:37:01.775 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":40,"name":"Oi","managerId":35}
+INFO  2022-01-23 21:37:01.785 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":38,"name":"Fulano","managerId":3}
+INFO  2022-01-23 21:37:01.796 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":11,"name":"Regina","managerId":3}
+INFO  2022-01-23 21:37:01.805 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":11}
+INFO  2022-01-23 21:37:01.815 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":3}
+INFO  2022-01-23 21:37:01.827 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":36,"name":"Ste","managerId":1}
+INFO  2022-01-23 21:37:01.843 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":39,"name":"Nao sei","managerId":3}
+INFO  2022-01-23 21:37:01.855 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":37,"name":"Ana Julia","managerId":3}
+INFO  2022-01-23 21:37:01.866 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":5,"name":"Leonardo","managerId":37}
+INFO  2022-01-23 21:37:01.869 [http-nio-8080-exec-2] HierarchyServiceImpl - Returning response: {"Alberto":{"Edna":{"Julia":{"Oi":{}}},"Fulano":{},"Regina":{"Nathalia":{}},"Evandro":{"Ste":{}},"Nao sei":{},"Ana Julia":{"Leonardo":{}}}}
+INFO  2022-01-23 21:37:34.402 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-23 21:37:34.409 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-23 21:37:34.431 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-23 21:37:41.632 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-23 21:37:41.771 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 56310 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-23 21:37:41.803 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-23 21:37:44.719 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-23 21:37:44.811 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-23 21:37:46.075 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-23 21:37:46.090 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-23 21:37:46.091 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-23 21:37:46.092 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-23 21:37:46.266 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-23 21:37:46.266 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4301 ms
+INFO  2022-01-23 21:37:46.881 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-23 21:37:46.962 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-23 21:37:47.155 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-23 21:37:47.300 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-23 21:37:47.582 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-23 21:37:47.607 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-23 21:37:48.631 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-23 21:37:48.642 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-23 21:37:50.577 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-23 21:37:50.781 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8c14ac5b-70ec-434b-92e4-4fbf238ab8f9
+
+INFO  2022-01-23 21:37:51.055 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-23 21:37:51.056 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-23 21:37:51.056 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-23 21:37:51.057 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-23 21:37:51.057 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-23 21:37:51.058 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-23 21:37:51.187 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6421e9e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@71d0ad00, org.springframework.security.web.header.HeaderWriterFilter@59eb987a, org.springframework.security.web.authentication.logout.LogoutFilter@4fe687b5, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@552b7481, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c34ce24, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f6f2d91, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@475b796d, org.springframework.security.web.session.SessionManagementFilter@747476f1, org.springframework.security.web.access.ExceptionTranslationFilter@3304362e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d028c7e]
+INFO  2022-01-23 21:37:54.090 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-23 21:37:54.161 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-23 21:37:54.184 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-23 21:37:54.209 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 13.358 seconds (JVM running for 15.918)
+INFO  2022-01-23 21:38:08.047 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-23 21:38:08.047 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-23 21:38:08.049 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 2 ms
+INFO  2022-01-23 21:38:08.222 [http-nio-8080-exec-1] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Harry": "Stephanie",
+	"Lucas": "Stephanie",
+	"Evandro": "Pedro",
+	"Nathalia":"Lucas",	
+	"Pedro":"Stephanie"
+}
+INFO  2022-01-23 21:38:08.227 [http-nio-8080-exec-1] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:38:08.228 [http-nio-8080-exec-1] HierarchyServiceImpl - Boss founded: Stephanie
+INFO  2022-01-23 21:38:08.229 [http-nio-8080-exec-1] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 5
+INFO  2022-01-23 21:38:08.231 [http-nio-8080-exec-1] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:38:10.709 [http-nio-8080-exec-1] HierarchyServiceImpl - Strucutre tree: {"name":"Stephanie","subordinates":[{"name":"Harry","subordinates":[]},{"name":"Lucas","subordinates":[{"name":"Nathalia","subordinates":[]}]},{"name":"Pedro","subordinates":[{"name":"Evandro","subordinates":[]}]}]}
+INFO  2022-01-23 21:38:10.709 [http-nio-8080-exec-1] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:38:10.815 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into database: {"employeeId":9,"name":"Stephanie"}
+INFO  2022-01-23 21:38:10.820 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":33,"name":"Harry","managerId":9}
+INFO  2022-01-23 21:38:10.825 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":12,"name":"Lucas","managerId":9}
+INFO  2022-01-23 21:38:10.863 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":10,"name":"Nathalia","managerId":12}
+INFO  2022-01-23 21:38:10.867 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":22,"name":"Pedro","managerId":9}
+INFO  2022-01-23 21:38:10.872 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":22}
+INFO  2022-01-23 21:38:10.873 [http-nio-8080-exec-1] HierarchyServiceImpl - Returning response: {"Stephanie":{"Harry":{},"Lucas":{"Nathalia":{}},"Pedro":{"Evandro":{}}}}
+INFO  2022-01-23 21:39:19.061 [http-nio-8080-exec-3] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie"
+}
+INFO  2022-01-23 21:39:19.062 [http-nio-8080-exec-3] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:39:19.063 [http-nio-8080-exec-3] HierarchyServiceImpl - Boss founded: Iara
+INFO  2022-01-23 21:39:19.064 [http-nio-8080-exec-3] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 7
+INFO  2022-01-23 21:39:19.064 [http-nio-8080-exec-3] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:39:21.252 [http-nio-8080-exec-3] HierarchyServiceImpl - Strucutre tree: {"name":"Iara","subordinates":[{"name":"Gabi","subordinates":[{"name":"Lara","subordinates":[]},{"name":"Bruna","subordinates":[]}]},{"name":"Stephanie","subordinates":[{"name":"Marcela","subordinates":[]}]},{"name":"Lorena","subordinates":[]},{"name":"Mari","subordinates":[]}]}
+INFO  2022-01-23 21:39:21.252 [http-nio-8080-exec-3] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:39:21.296 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into database: {"employeeId":41,"name":"Iara"}
+INFO  2022-01-23 21:39:21.305 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":42,"name":"Gabi","managerId":41}
+INFO  2022-01-23 21:39:21.312 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":32,"name":"Lara","managerId":42}
+INFO  2022-01-23 21:39:21.319 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":43,"name":"Bruna","managerId":42}
+INFO  2022-01-23 21:39:21.329 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":9,"name":"Stephanie","managerId":41}
+INFO  2022-01-23 21:39:21.337 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":44,"name":"Marcela","managerId":9}
+INFO  2022-01-23 21:39:21.347 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":45,"name":"Lorena","managerId":41}
+INFO  2022-01-23 21:39:21.352 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":46,"name":"Mari","managerId":41}
+INFO  2022-01-23 21:39:21.353 [http-nio-8080-exec-3] HierarchyServiceImpl - Returning response: {"Iara":{"Gabi":{"Lara":{},"Bruna":{}},"Stephanie":{"Marcela":{}},"Lorena":{},"Mari":{}}}
+INFO  2022-01-23 21:39:55.989 [http-nio-8080-exec-4] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie",
+	"Stephanie":"Gabi"
+}
+INFO  2022-01-23 21:39:55.991 [http-nio-8080-exec-4] ErrorConstants - The employee 'Stephanie' must not have more than one supervisor.
+INFO  2022-01-23 21:40:07.944 [http-nio-8080-exec-5] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie",
+	"Marcela":"Gabi"
+}
+INFO  2022-01-23 21:40:07.944 [http-nio-8080-exec-5] ErrorConstants - The employee 'Marcela' must not have more than one supervisor.
+INFO  2022-01-23 21:40:17.540 [http-nio-8080-exec-6] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie",
+	"Iara":"Marcela"
+}
+INFO  2022-01-23 21:40:17.541 [http-nio-8080-exec-6] HierarchyServiceImpl - Finding the boss of the structure...
+ERROR 2022-01-23 21:40:17.541 [http-nio-8080-exec-6] HierarchyServiceImpl - There is no boss in this structure.
+INFO  2022-01-23 21:40:41.304 [http-nio-8080-exec-7] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie",
+	"Ana Julia":"Alberto",
+	"Leonardo":"Ana Julia"
+}
+INFO  2022-01-23 21:40:41.305 [http-nio-8080-exec-7] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:40:41.307 [http-nio-8080-exec-7] HierarchyServiceImpl - Boss founded: Iara
+INFO  2022-01-23 21:40:41.309 [http-nio-8080-exec-7] HierarchyServiceImpl - Boss founded: Alberto
+ERROR 2022-01-23 21:40:41.310 [http-nio-8080-exec-7] HierarchyServiceImpl - There are more than one boss found in this structure.
+INFO  2022-01-23 21:40:57.431 [http-nio-8080-exec-8] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie",
+	"Ana Julia":"Alberto",
+	"Leonardo":"Ana Julia",
+	"Alberto":"Leonardo"
+}
+INFO  2022-01-23 21:40:57.432 [http-nio-8080-exec-8] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:40:57.432 [http-nio-8080-exec-8] HierarchyServiceImpl - Boss founded: Iara
+INFO  2022-01-23 21:40:57.432 [http-nio-8080-exec-8] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 10
+INFO  2022-01-23 21:40:57.432 [http-nio-8080-exec-8] HierarchyServiceImpl - Converting the structure into a tree...
+ERROR 2022-01-23 21:41:10.210 [http-nio-8080-exec-8] HierarchyServiceImpl - There is a loop in the hierarchy.
+INFO  2022-01-23 21:41:21.820 [http-nio-8080-exec-9] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie"
+}
+INFO  2022-01-23 21:41:21.821 [http-nio-8080-exec-9] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:41:21.822 [http-nio-8080-exec-9] HierarchyServiceImpl - Boss founded: Iara
+INFO  2022-01-23 21:41:21.822 [http-nio-8080-exec-9] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 7
+INFO  2022-01-23 21:41:21.823 [http-nio-8080-exec-9] HierarchyServiceImpl - Converting the structure into a tree...
+ERROR 2022-01-23 21:43:14.649 [http-nio-8080-exec-9] HierarchyServiceImpl - There is a loop in the hierarchy.
+WARN  2022-01-23 21:43:14.649 [HikariPool-1 housekeeper] HikariPool$HouseKeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m56s963ms440µs900ns).
+INFO  2022-01-23 21:43:14.768 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-23 21:43:14.777 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-23 21:43:14.795 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-23 21:43:22.996 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-23 21:43:23.090 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 56645 (/home/evandro/personal-workspace/company-hierarchy/target/classes started by evandro in /home/evandro/personal-workspace/company-hierarchy)
+INFO  2022-01-23 21:43:23.098 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-23 21:43:25.086 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-23 21:43:25.198 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-23 21:43:26.473 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-23 21:43:26.489 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-23 21:43:26.490 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-23 21:43:26.491 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-23 21:43:26.628 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-23 21:43:26.628 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3432 ms
+INFO  2022-01-23 21:43:27.207 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-23 21:43:27.279 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-23 21:43:27.494 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-23 21:43:27.630 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-23 21:43:27.929 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-23 21:43:27.957 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-23 21:43:29.041 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-23 21:43:29.053 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-23 21:43:30.326 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-23 21:43:30.760 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8a79e82c-1ea6-4d33-a522-e919c7e9747e
+
+INFO  2022-01-23 21:43:31.027 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-23 21:43:31.029 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-23 21:43:31.030 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-23 21:43:31.032 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-23 21:43:31.035 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-23 21:43:31.036 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-23 21:43:31.182 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@506654fa, org.springframework.security.web.context.SecurityContextPersistenceFilter@542c6165, org.springframework.security.web.header.HeaderWriterFilter@34dda1b4, org.springframework.security.web.authentication.logout.LogoutFilter@7842260f, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@4468ced2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d466ef9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ee5fe1e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21f421b8, org.springframework.security.web.session.SessionManagementFilter@123d666b, org.springframework.security.web.access.ExceptionTranslationFilter@44b82007, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61c42e54]
+INFO  2022-01-23 21:43:34.015 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-23 21:43:34.060 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-23 21:43:34.082 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-23 21:43:34.105 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 11.773 seconds (JVM running for 13.906)
+INFO  2022-01-23 21:43:57.274 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-23 21:43:57.275 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-23 21:43:57.279 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 4 ms
+INFO  2022-01-23 21:43:57.454 [http-nio-8080-exec-1] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie"
+}
+INFO  2022-01-23 21:43:57.457 [http-nio-8080-exec-1] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:43:57.458 [http-nio-8080-exec-1] HierarchyServiceImpl - Boss founded: Iara
+INFO  2022-01-23 21:43:57.458 [http-nio-8080-exec-1] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 7
+INFO  2022-01-23 21:43:57.460 [http-nio-8080-exec-1] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:43:57.485 [http-nio-8080-exec-1] HierarchyServiceImpl - Strucutre tree: {"name":"Iara","subordinates":[{"name":"Gabi","subordinates":[{"name":"Lara","subordinates":[]},{"name":"Bruna","subordinates":[]}]},{"name":"Stephanie","subordinates":[{"name":"Marcela","subordinates":[]}]},{"name":"Lorena","subordinates":[]},{"name":"Mari","subordinates":[]}]}
+INFO  2022-01-23 21:43:57.488 [http-nio-8080-exec-1] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:43:57.649 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into database: {"employeeId":41,"name":"Iara"}
+INFO  2022-01-23 21:43:57.656 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":42,"name":"Gabi","managerId":41}
+INFO  2022-01-23 21:43:57.661 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":32,"name":"Lara","managerId":42}
+INFO  2022-01-23 21:43:57.670 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":43,"name":"Bruna","managerId":42}
+INFO  2022-01-23 21:43:57.682 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":9,"name":"Stephanie","managerId":41}
+INFO  2022-01-23 21:43:57.692 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":44,"name":"Marcela","managerId":9}
+INFO  2022-01-23 21:43:57.701 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":45,"name":"Lorena","managerId":41}
+INFO  2022-01-23 21:43:57.707 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":46,"name":"Mari","managerId":41}
+INFO  2022-01-23 21:43:57.708 [http-nio-8080-exec-1] HierarchyServiceImpl - Returning response: {"Iara":{"Gabi":{"Lara":{},"Bruna":{}},"Stephanie":{"Marcela":{}},"Lorena":{},"Mari":{}}}
+INFO  2022-01-23 21:44:05.423 [http-nio-8080-exec-2] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie",
+	"Ana Julia":"Alberto",
+	"Leonardo":"Ana Julia",
+	"Alberto":"Leonardo"
+}
+INFO  2022-01-23 21:44:05.424 [http-nio-8080-exec-2] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:44:05.424 [http-nio-8080-exec-2] HierarchyServiceImpl - Boss founded: Iara
+INFO  2022-01-23 21:44:05.425 [http-nio-8080-exec-2] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 10
+INFO  2022-01-23 21:44:05.425 [http-nio-8080-exec-2] HierarchyServiceImpl - Converting the structure into a tree...
+ERROR 2022-01-23 21:44:05.425 [http-nio-8080-exec-2] HierarchyServiceImpl - There is a loop in the hierarchy.
+INFO  2022-01-23 21:44:10.140 [http-nio-8080-exec-3] HierarchyController - Creating a new hierarchy. Submitted structure: {
+	"Bruna":"Gabi",
+	"Lorena":"Iara",
+	"Stephanie":"Iara",
+	"Gabi":"Iara",
+	"Mari":"Iara",
+	"Lara":"Gabi",
+	"Marcela":"Stephanie"
+}
+INFO  2022-01-23 21:44:10.141 [http-nio-8080-exec-3] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-23 21:44:10.141 [http-nio-8080-exec-3] HierarchyServiceImpl - Boss founded: Iara
+INFO  2022-01-23 21:44:10.142 [http-nio-8080-exec-3] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 7
+INFO  2022-01-23 21:44:10.142 [http-nio-8080-exec-3] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-23 21:44:10.142 [http-nio-8080-exec-3] HierarchyServiceImpl - Strucutre tree: {"name":"Iara","subordinates":[{"name":"Gabi","subordinates":[{"name":"Lara","subordinates":[]},{"name":"Bruna","subordinates":[]}]},{"name":"Stephanie","subordinates":[{"name":"Marcela","subordinates":[]}]},{"name":"Lorena","subordinates":[]},{"name":"Mari","subordinates":[]}]}
+INFO  2022-01-23 21:44:10.142 [http-nio-8080-exec-3] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-23 21:44:10.146 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into database: {"employeeId":41,"name":"Iara"}
+INFO  2022-01-23 21:44:10.151 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":42,"name":"Gabi","managerId":41}
+INFO  2022-01-23 21:44:10.155 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":32,"name":"Lara","managerId":42}
+INFO  2022-01-23 21:44:10.159 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":43,"name":"Bruna","managerId":42}
+INFO  2022-01-23 21:44:10.161 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":9,"name":"Stephanie","managerId":41}
+INFO  2022-01-23 21:44:10.165 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":44,"name":"Marcela","managerId":9}
+INFO  2022-01-23 21:44:10.170 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":45,"name":"Lorena","managerId":41}
+INFO  2022-01-23 21:44:10.174 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":46,"name":"Mari","managerId":41}
+INFO  2022-01-23 21:44:10.175 [http-nio-8080-exec-3] HierarchyServiceImpl - Returning response: {"Iara":{"Gabi":{"Lara":{},"Bruna":{}},"Stephanie":{"Marcela":{}},"Lorena":{},"Mari":{}}}
+INFO  2022-01-23 21:44:34.504 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-23 21:44:34.507 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-23 21:44:34.518 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
