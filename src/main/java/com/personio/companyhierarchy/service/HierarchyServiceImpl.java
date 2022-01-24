@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class HierarchyServiceImpl implements HierarchyService{
@@ -227,10 +228,32 @@ public class HierarchyServiceImpl implements HierarchyService{
     public JSONObject searchForSupervisors(Employee employeeDTO) throws ApiExceptions {
         // Search the supervisor and supervisor's supervisor by the employee name
         List<Employee> list = employeeRepository.findSupervisorAndSupervisorsSupervisorFromGivenName(employeeDTO.getName());
+
+        // Sorting the list
+        List<Employee> sortedList = new ArrayList<>();
+        boolean found = false;
+
+        for(int i = 0 ; i < list.size(); i++){          // Iterate through the returned list
+            Employee employee = list.get(i);            // Get the 'i' element
+            for(Employee emp : list){                   // Will comparate the 'i' element with every element of the list
+                if(employee.getManagerId() == emp.getEmployeeId()){     // Check if the 'i' element is the most senior
+                    found = true;
+                    break;
+                }
+            }
+            if(!found) {                                // If the 'i' element is the most senior...
+                sortedList.add(employee);               // add it to sortedList ...
+                list.remove(employee);                  // and remove it from the iterating list
+                i = -1;                                 // i = -1 for getting back the first element from returned list
+            }
+            found = false;
+        }
+
+
         logger.info("It was found {} employees related to '{}'", list.size(), employeeDTO.getName());
         EmployeeDTO tree = new EmployeeDTO();
-        if(!list.isEmpty()) {
-            tree = addSubordinates(0, list);
+        if(!sortedList.isEmpty()) {
+            tree = addSubordinates(0, sortedList);
             logger.info("Supervisors of '{}' found in database: {}", employeeDTO.getName(), gson.toJson(tree));
         }else
             return new JSONObject("{}");

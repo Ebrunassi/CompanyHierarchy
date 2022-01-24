@@ -2804,3 +2804,675 @@ INFO  2022-01-23 21:44:10.175 [http-nio-8080-exec-3] HierarchyServiceImpl - Retu
 INFO  2022-01-23 21:44:34.504 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 INFO  2022-01-23 21:44:34.507 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
 INFO  2022-01-23 21:44:34.518 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-24 11:40:28.532 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-24 11:40:28.658 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 4805 (/home/evandro/personal-workspace/CompanyHierarchy/target/classes started by evandro in /home/evandro/personal-workspace/CompanyHierarchy)
+INFO  2022-01-24 11:40:28.676 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-24 11:40:31.264 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-24 11:40:31.351 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-24 11:40:32.635 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-24 11:40:32.660 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 11:40:32.662 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-24 11:40:32.665 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-24 11:40:32.824 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-24 11:40:32.825 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4033 ms
+INFO  2022-01-24 11:40:33.453 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-24 11:40:33.552 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-24 11:40:33.864 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-24 11:40:34.085 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-24 11:40:34.398 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-24 11:40:34.431 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-24 11:40:35.538 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-24 11:40:35.547 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-24 11:40:37.373 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-24 11:40:37.670 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c12b8391-3ff5-4128-91ff-a683f8db19a9
+
+INFO  2022-01-24 11:40:38.070 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-24 11:40:38.071 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-24 11:40:38.072 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-24 11:40:38.072 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-24 11:40:38.073 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-24 11:40:38.074 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-24 11:40:38.257 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e305953, org.springframework.security.web.context.SecurityContextPersistenceFilter@15ade272, org.springframework.security.web.header.HeaderWriterFilter@2f006edf, org.springframework.security.web.authentication.logout.LogoutFilter@5ce1ec7, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@59d7d574, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44b5b54, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a644d75, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@94b5fe3, org.springframework.security.web.session.SessionManagementFilter@47a90d2a, org.springframework.security.web.access.ExceptionTranslationFilter@54a5eff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@427128a6]
+INFO  2022-01-24 11:40:41.935 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-24 11:40:42.122 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 11:40:42.177 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-24 11:40:42.227 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 14.239 seconds (JVM running for 17.82)
+INFO  2022-01-24 11:43:05.459 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-24 11:43:05.480 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-24 11:43:05.546 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-24 11:44:11.661 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-24 11:44:11.747 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 5936 (/home/evandro/personal-workspace/CompanyHierarchy/target/classes started by evandro in /home/evandro/personal-workspace/CompanyHierarchy)
+INFO  2022-01-24 11:44:11.762 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-24 11:44:14.254 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-24 11:44:14.365 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-24 11:44:15.921 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-24 11:44:15.940 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 11:44:15.942 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-24 11:44:15.943 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-24 11:44:16.164 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-24 11:44:16.165 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4261 ms
+INFO  2022-01-24 11:44:16.900 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-24 11:44:16.994 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-24 11:44:17.548 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-24 11:44:17.743 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-24 11:44:18.504 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-24 11:44:18.544 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-24 11:44:21.644 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-24 11:44:21.684 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-24 11:44:23.543 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-24 11:44:23.743 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5b8c71b6-9f27-400f-b392-2c6898357c63
+
+INFO  2022-01-24 11:44:23.998 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-24 11:44:23.999 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-24 11:44:24.000 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-24 11:44:24.000 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-24 11:44:24.001 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-24 11:44:24.001 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-24 11:44:24.125 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ade4ac6, org.springframework.security.web.context.SecurityContextPersistenceFilter@738ed8d3, org.springframework.security.web.header.HeaderWriterFilter@4b02dc4e, org.springframework.security.web.authentication.logout.LogoutFilter@1d0f03f6, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@fcae085, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c289070, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43a9988a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e3c6323, org.springframework.security.web.session.SessionManagementFilter@6db84cae, org.springframework.security.web.access.ExceptionTranslationFilter@60b8c05c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37d50217]
+INFO  2022-01-24 11:44:27.011 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-24 11:44:27.091 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 11:44:27.118 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-24 11:44:27.152 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 16.005 seconds (JVM running for 19.312)
+INFO  2022-01-24 11:44:34.598 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-24 11:44:34.599 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-24 11:44:34.613 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 13 ms
+INFO  2022-01-24 11:44:35.097 [http-nio-8080-exec-1] HierarchyController - Creating a new hierarchy. Submitted structure: {
+ "Ricardo":"Fernando",
+ "Bruno":"Fernando",
+ "Esther":"Fernando",
+ "Evandro":"Fernando",
+ "Julio":"Fernando",
+ "Walter":"Fernando",
+ "Fernando":"Tercio"
+}
+INFO  2022-01-24 11:44:35.124 [http-nio-8080-exec-1] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-24 11:44:35.125 [http-nio-8080-exec-1] HierarchyServiceImpl - Boss founded: Tercio
+INFO  2022-01-24 11:44:35.128 [http-nio-8080-exec-1] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 7
+INFO  2022-01-24 11:44:35.142 [http-nio-8080-exec-1] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-24 11:44:35.168 [http-nio-8080-exec-1] HierarchyServiceImpl - Strucutre tree: {"name":"Tercio","subordinates":[{"name":"Fernando","subordinates":[{"name":"Walter","subordinates":[]},{"name":"Bruno","subordinates":[]},{"name":"Ricardo","subordinates":[]},{"name":"Esther","subordinates":[]},{"name":"Evandro","subordinates":[]},{"name":"Julio","subordinates":[]}]}]}
+INFO  2022-01-24 11:44:35.168 [http-nio-8080-exec-1] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-24 11:44:35.504 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into database: {"employeeId":47,"name":"Tercio"}
+INFO  2022-01-24 11:44:35.538 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":48,"name":"Fernando","managerId":47}
+INFO  2022-01-24 11:44:35.553 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":49,"name":"Walter","managerId":48}
+INFO  2022-01-24 11:44:35.569 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":50,"name":"Bruno","managerId":48}
+INFO  2022-01-24 11:44:35.582 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":51,"name":"Ricardo","managerId":48}
+INFO  2022-01-24 11:44:35.590 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":52,"name":"Esther","managerId":48}
+INFO  2022-01-24 11:44:35.645 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":48}
+INFO  2022-01-24 11:44:35.659 [http-nio-8080-exec-1] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":53,"name":"Julio","managerId":48}
+INFO  2022-01-24 11:44:35.662 [http-nio-8080-exec-1] HierarchyServiceImpl - Returning response: {"Tercio":{"Fernando":{"Walter":{},"Bruno":{},"Ricardo":{},"Esther":{},"Evandro":{},"Julio":{}}}}
+INFO  2022-01-24 11:44:39.205 [http-nio-8080-exec-2] HierarchyController - Creating a new hierarchy. Submitted structure: {
+ "Ricardo":"Fernando",
+ "Bruno":"Fernando",
+ "Esther":"Fernando",
+ "Evandro":"Fernando",
+ "Julio":"Fernando",
+ "Walter":"Fernando",
+ "Fernando":"Tercio",
+ "Jeferson":"Rubens",
+ "Valerio":"Galindo",
+ "Leandro":"Rubens",
+ "Thays":"Rubens",
+ "Rubens":"Tercio",
+ "Tercio":"Valerio",
+ "Paulo":"Galindo"
+}
+INFO  2022-01-24 11:44:39.206 [http-nio-8080-exec-2] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-24 11:44:39.206 [http-nio-8080-exec-2] HierarchyServiceImpl - Boss founded: Galindo
+INFO  2022-01-24 11:44:39.206 [http-nio-8080-exec-2] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 14
+INFO  2022-01-24 11:44:39.207 [http-nio-8080-exec-2] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-24 11:44:39.207 [http-nio-8080-exec-2] HierarchyServiceImpl - Strucutre tree: {"name":"Galindo","subordinates":[{"name":"Valerio","subordinates":[{"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[{"name":"Jeferson","subordinates":[]},{"name":"Leandro","subordinates":[]},{"name":"Thays","subordinates":[]}]},{"name":"Fernando","subordinates":[{"name":"Walter","subordinates":[]},{"name":"Ricardo","subordinates":[]},{"name":"Esther","subordinates":[]},{"name":"Julio","subordinates":[]},{"name":"Bruno","subordinates":[]},{"name":"Evandro","subordinates":[]}]}]}]},{"name":"Paulo","subordinates":[]}]}
+INFO  2022-01-24 11:44:39.208 [http-nio-8080-exec-2] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-24 11:44:39.215 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into database: {"employeeId":54,"name":"Galindo"}
+INFO  2022-01-24 11:44:39.221 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":55,"name":"Valerio","managerId":54}
+INFO  2022-01-24 11:44:39.226 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":47,"name":"Tercio","managerId":55}
+INFO  2022-01-24 11:44:39.233 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":56,"name":"Rubens","managerId":47}
+INFO  2022-01-24 11:44:39.239 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":57,"name":"Jeferson","managerId":56}
+INFO  2022-01-24 11:44:39.245 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":58,"name":"Leandro","managerId":56}
+INFO  2022-01-24 11:44:39.253 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":59,"name":"Thays","managerId":56}
+INFO  2022-01-24 11:44:39.256 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":48,"name":"Fernando","managerId":47}
+INFO  2022-01-24 11:44:39.259 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":49,"name":"Walter","managerId":48}
+INFO  2022-01-24 11:44:39.263 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":51,"name":"Ricardo","managerId":48}
+INFO  2022-01-24 11:44:39.266 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":52,"name":"Esther","managerId":48}
+INFO  2022-01-24 11:44:39.269 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":53,"name":"Julio","managerId":48}
+INFO  2022-01-24 11:44:39.273 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":50,"name":"Bruno","managerId":48}
+INFO  2022-01-24 11:44:39.276 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":48}
+INFO  2022-01-24 11:44:39.282 [http-nio-8080-exec-2] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":60,"name":"Paulo","managerId":54}
+INFO  2022-01-24 11:44:39.282 [http-nio-8080-exec-2] HierarchyServiceImpl - Returning response: {"Galindo":{"Paulo":{},"Valerio":{"Tercio":{"Rubens":{"Jeferson":{},"Leandro":{},"Thays":{}},"Fernando":{"Walter":{},"Bruno":{},"Ricardo":{},"Esther":{},"Evandro":{},"Julio":{}}}}}}
+INFO  2022-01-24 11:44:43.926 [http-nio-8080-exec-3] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Thays'
+INFO  2022-01-24 11:45:00.976 [http-nio-8080-exec-3] HierarchyServiceImpl - It was found 3 employees related to 'Thays'
+INFO  2022-01-24 11:45:00.980 [http-nio-8080-exec-3] HierarchyServiceImpl - Supervisors of 'Thays' found in database: {"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[{"name":"Thays","subordinates":[]}]}]}
+INFO  2022-01-24 11:45:00.985 [http-nio-8080-exec-3] HierarchyServiceImpl - Returning response: {"Tercio":{"Rubens":{"Thays":{}}}}
+INFO  2022-01-24 11:45:05.152 [http-nio-8080-exec-5] HierarchyController - Creating a new hierarchy. Submitted structure: {
+ "Ricardo":"Fernando",
+ "Bruno":"Fernando",
+ "Esther":"Fernando",
+ "Evandro":"Fernando",
+ "Julio":"Fernando",
+ "Walter":"Fernando",
+ "Fernando":"Tercio",
+ "Jeferson":"Rubens",
+ "Valerio":"Galindo",
+ "Leandro":"Rubens",
+ "Thays":"Rubens",
+ "Rubens":"Tercio",
+ "Tercio":"Valerio",
+ "Paulo":"Galindo"
+}
+INFO  2022-01-24 11:45:05.153 [http-nio-8080-exec-5] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-24 11:45:05.154 [http-nio-8080-exec-5] HierarchyServiceImpl - Boss founded: Galindo
+INFO  2022-01-24 11:45:05.154 [http-nio-8080-exec-5] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 14
+INFO  2022-01-24 11:45:05.155 [http-nio-8080-exec-5] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-24 11:45:05.157 [http-nio-8080-exec-5] HierarchyServiceImpl - Strucutre tree: {"name":"Galindo","subordinates":[{"name":"Valerio","subordinates":[{"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[{"name":"Jeferson","subordinates":[]},{"name":"Leandro","subordinates":[]},{"name":"Thays","subordinates":[]}]},{"name":"Fernando","subordinates":[{"name":"Walter","subordinates":[]},{"name":"Ricardo","subordinates":[]},{"name":"Esther","subordinates":[]},{"name":"Julio","subordinates":[]},{"name":"Bruno","subordinates":[]},{"name":"Evandro","subordinates":[]}]}]}]},{"name":"Paulo","subordinates":[]}]}
+INFO  2022-01-24 11:45:05.157 [http-nio-8080-exec-5] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-24 11:45:05.162 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into database: {"employeeId":54,"name":"Galindo"}
+INFO  2022-01-24 11:45:05.168 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":55,"name":"Valerio","managerId":54}
+INFO  2022-01-24 11:45:05.173 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":47,"name":"Tercio","managerId":55}
+INFO  2022-01-24 11:45:05.177 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":56,"name":"Rubens","managerId":47}
+INFO  2022-01-24 11:45:05.180 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":57,"name":"Jeferson","managerId":56}
+INFO  2022-01-24 11:45:05.186 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":58,"name":"Leandro","managerId":56}
+INFO  2022-01-24 11:45:05.191 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":59,"name":"Thays","managerId":56}
+INFO  2022-01-24 11:45:05.197 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":48,"name":"Fernando","managerId":47}
+INFO  2022-01-24 11:45:05.207 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":49,"name":"Walter","managerId":48}
+INFO  2022-01-24 11:45:05.214 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":51,"name":"Ricardo","managerId":48}
+INFO  2022-01-24 11:45:05.225 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":52,"name":"Esther","managerId":48}
+INFO  2022-01-24 11:45:05.229 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":53,"name":"Julio","managerId":48}
+INFO  2022-01-24 11:45:05.234 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":50,"name":"Bruno","managerId":48}
+INFO  2022-01-24 11:45:05.240 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":48}
+INFO  2022-01-24 11:45:05.244 [http-nio-8080-exec-5] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":60,"name":"Paulo","managerId":54}
+INFO  2022-01-24 11:45:05.245 [http-nio-8080-exec-5] HierarchyServiceImpl - Returning response: {"Galindo":{"Paulo":{},"Valerio":{"Tercio":{"Rubens":{"Jeferson":{},"Leandro":{},"Thays":{}},"Fernando":{"Walter":{},"Bruno":{},"Ricardo":{},"Esther":{},"Evandro":{},"Julio":{}}}}}}
+INFO  2022-01-24 11:45:07.147 [http-nio-8080-exec-6] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Thays'
+INFO  2022-01-24 11:45:09.091 [http-nio-8080-exec-6] HierarchyServiceImpl - It was found 3 employees related to 'Thays'
+INFO  2022-01-24 11:45:09.094 [http-nio-8080-exec-6] HierarchyServiceImpl - Supervisors of 'Thays' found in database: {"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[{"name":"Thays","subordinates":[]}]}]}
+INFO  2022-01-24 11:45:09.095 [http-nio-8080-exec-6] HierarchyServiceImpl - Returning response: {"Tercio":{"Rubens":{"Thays":{}}}}
+INFO  2022-01-24 11:45:20.038 [http-nio-8080-exec-7] HierarchyController - Creating a new hierarchy. Submitted structure: {
+ "Ricardo":"Fernando",
+ "Bruno":"Fernando",
+ "Esther":"Fernando",
+	"Paulo":"Galindo",
+ "Evandro":"Fernando",
+ "Julio":"Fernando",
+ "Walter":"Fernando",
+ "Fernando":"Tercio",
+ "Jeferson":"Rubens",
+ "Valerio":"Galindo",
+ "Leandro":"Rubens",
+ "Thays":"Rubens",
+ "Rubens":"Tercio",
+ "Tercio":"Valerio" 
+}
+INFO  2022-01-24 11:45:20.040 [http-nio-8080-exec-7] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-24 11:45:20.041 [http-nio-8080-exec-7] HierarchyServiceImpl - Boss founded: Galindo
+INFO  2022-01-24 11:45:20.041 [http-nio-8080-exec-7] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 14
+INFO  2022-01-24 11:45:20.042 [http-nio-8080-exec-7] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-24 11:45:20.044 [http-nio-8080-exec-7] HierarchyServiceImpl - Strucutre tree: {"name":"Galindo","subordinates":[{"name":"Valerio","subordinates":[{"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[{"name":"Jeferson","subordinates":[]},{"name":"Leandro","subordinates":[]},{"name":"Thays","subordinates":[]}]},{"name":"Fernando","subordinates":[{"name":"Walter","subordinates":[]},{"name":"Ricardo","subordinates":[]},{"name":"Esther","subordinates":[]},{"name":"Julio","subordinates":[]},{"name":"Bruno","subordinates":[]},{"name":"Evandro","subordinates":[]}]}]}]},{"name":"Paulo","subordinates":[]}]}
+INFO  2022-01-24 11:45:20.045 [http-nio-8080-exec-7] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-24 11:45:20.050 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into database: {"employeeId":54,"name":"Galindo"}
+INFO  2022-01-24 11:45:20.055 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":55,"name":"Valerio","managerId":54}
+INFO  2022-01-24 11:45:20.059 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":47,"name":"Tercio","managerId":55}
+INFO  2022-01-24 11:45:20.062 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":56,"name":"Rubens","managerId":47}
+INFO  2022-01-24 11:45:20.065 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":57,"name":"Jeferson","managerId":56}
+INFO  2022-01-24 11:45:20.068 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":58,"name":"Leandro","managerId":56}
+INFO  2022-01-24 11:45:20.073 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":59,"name":"Thays","managerId":56}
+INFO  2022-01-24 11:45:20.077 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":48,"name":"Fernando","managerId":47}
+INFO  2022-01-24 11:45:20.081 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":49,"name":"Walter","managerId":48}
+INFO  2022-01-24 11:45:20.085 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":51,"name":"Ricardo","managerId":48}
+INFO  2022-01-24 11:45:20.091 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":52,"name":"Esther","managerId":48}
+INFO  2022-01-24 11:45:20.095 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":53,"name":"Julio","managerId":48}
+INFO  2022-01-24 11:45:20.100 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":50,"name":"Bruno","managerId":48}
+INFO  2022-01-24 11:45:20.105 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":48}
+INFO  2022-01-24 11:45:20.110 [http-nio-8080-exec-7] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":60,"name":"Paulo","managerId":54}
+INFO  2022-01-24 11:45:20.111 [http-nio-8080-exec-7] HierarchyServiceImpl - Returning response: {"Galindo":{"Paulo":{},"Valerio":{"Tercio":{"Rubens":{"Jeferson":{},"Leandro":{},"Thays":{}},"Fernando":{"Walter":{},"Bruno":{},"Ricardo":{},"Esther":{},"Evandro":{},"Julio":{}}}}}}
+INFO  2022-01-24 11:45:21.776 [http-nio-8080-exec-8] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Thays'
+INFO  2022-01-24 11:45:23.219 [http-nio-8080-exec-8] HierarchyServiceImpl - It was found 3 employees related to 'Thays'
+INFO  2022-01-24 11:45:23.220 [http-nio-8080-exec-8] HierarchyServiceImpl - Supervisors of 'Thays' found in database: {"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[{"name":"Thays","subordinates":[]}]}]}
+INFO  2022-01-24 11:45:23.221 [http-nio-8080-exec-8] HierarchyServiceImpl - Returning response: {"Tercio":{"Rubens":{"Thays":{}}}}
+INFO  2022-01-24 11:45:29.754 [http-nio-8080-exec-9] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+INFO  2022-01-24 11:45:32.029 [http-nio-8080-exec-9] HierarchyServiceImpl - It was found 3 employees related to 'Evandro'
+INFO  2022-01-24 11:45:32.031 [http-nio-8080-exec-9] HierarchyServiceImpl - Supervisors of 'Evandro' found in database: {"name":"Fernando","subordinates":[{"name":"Evandro","subordinates":[{"name":"Tercio","subordinates":[]}]}]}
+INFO  2022-01-24 11:45:32.032 [http-nio-8080-exec-9] HierarchyServiceImpl - Returning response: {"Fernando":{"Evandro":{"Tercio":{}}}}
+INFO  2022-01-24 11:45:37.321 [http-nio-8080-exec-10] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+WARN  2022-01-24 11:59:44.678 [HikariPool-1 housekeeper] HikariPool$HouseKeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m25s954ms474µs735ns).
+INFO  2022-01-24 11:59:44.681 [http-nio-8080-exec-10] HierarchyServiceImpl - It was found 3 employees related to 'Evandro'
+INFO  2022-01-24 11:59:44.687 [http-nio-8080-exec-10] HierarchyServiceImpl - Supervisors of 'Evandro' found in database: {"name":"Fernando","subordinates":[{"name":"Evandro","subordinates":[{"name":"Tercio","subordinates":[]}]}]}
+INFO  2022-01-24 11:59:44.708 [http-nio-8080-exec-10] HierarchyServiceImpl - Returning response: {"Fernando":{"Evandro":{"Tercio":{}}}}
+INFO  2022-01-24 11:59:44.812 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-24 11:59:44.820 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-24 11:59:44.839 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-24 11:59:54.950 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-24 11:59:55.082 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 6927 (/home/evandro/personal-workspace/CompanyHierarchy/target/classes started by evandro in /home/evandro/personal-workspace/CompanyHierarchy)
+INFO  2022-01-24 11:59:55.097 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-24 11:59:58.992 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-24 11:59:59.156 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 125 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-24 12:00:00.983 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-24 12:00:01.003 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:00:01.004 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-24 12:00:01.005 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-24 12:00:01.183 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-24 12:00:01.184 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5917 ms
+INFO  2022-01-24 12:00:01.897 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-24 12:00:01.963 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-24 12:00:02.179 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-24 12:00:02.362 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-24 12:00:02.889 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-24 12:00:02.961 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-24 12:00:05.228 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-24 12:00:05.244 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-24 12:00:07.198 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-24 12:00:07.565 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ea59269a-e761-40ea-a56c-6b516cdc1695
+
+INFO  2022-01-24 12:00:07.917 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-24 12:00:07.920 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-24 12:00:07.921 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-24 12:00:07.922 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-24 12:00:07.923 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-24 12:00:07.923 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-24 12:00:08.106 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46ee9cfd, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ab7e997, org.springframework.security.web.header.HeaderWriterFilter@37e15055, org.springframework.security.web.authentication.logout.LogoutFilter@2f154d9b, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@6b58a0f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b3b5252, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f378d7e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b6c3b37, org.springframework.security.web.session.SessionManagementFilter@5205b3e2, org.springframework.security.web.access.ExceptionTranslationFilter@50ba19df, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55f29d39]
+INFO  2022-01-24 12:00:12.628 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-24 12:00:12.731 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:00:12.794 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-24 12:00:12.843 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 18.666 seconds (JVM running for 22.292)
+INFO  2022-01-24 12:00:18.160 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-24 12:00:18.164 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-24 12:00:18.171 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 6 ms
+INFO  2022-01-24 12:00:19.283 [http-nio-8080-exec-2] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+ERROR 2022-01-24 12:02:34.944 [http-nio-8080-exec-2] DirectJDKLog - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.ConcurrentModificationException] with root cause
+java.util.ConcurrentModificationException: null
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1042) ~[?:?]
+	at java.util.ArrayList$Itr.next(ArrayList.java:996) ~[?:?]
+	at com.personio.companyhierarchy.service.HierarchyServiceImpl.searchForSupervisors(HierarchyServiceImpl.java:238) ~[classes/:?]
+	at com.personio.companyhierarchy.controller.HierarchyController.getSupervisors(HierarchyController.java:54) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter.doFilter(JWTAuthenticationFilter.java:25) ~[classes/:?]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.2.jar:2.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+INFO  2022-01-24 12:03:41.077 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-24 12:03:41.081 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-24 12:03:41.098 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-24 12:03:54.740 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-24 12:03:54.817 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 7402 (/home/evandro/personal-workspace/CompanyHierarchy/target/classes started by evandro in /home/evandro/personal-workspace/CompanyHierarchy)
+INFO  2022-01-24 12:03:54.830 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-24 12:03:57.051 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-24 12:03:57.143 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-24 12:03:58.328 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-24 12:03:58.345 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:03:58.347 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-24 12:03:58.347 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-24 12:03:58.509 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-24 12:03:58.510 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3594 ms
+INFO  2022-01-24 12:03:59.174 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-24 12:03:59.255 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-24 12:03:59.498 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-24 12:03:59.662 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-24 12:04:00.094 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-24 12:04:00.123 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-24 12:04:01.231 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-24 12:04:01.243 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-24 12:04:02.429 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-24 12:04:02.616 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b620c6e7-3ee9-46a7-8056-4982d91a41f2
+
+INFO  2022-01-24 12:04:02.769 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-24 12:04:02.770 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-24 12:04:02.771 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-24 12:04:02.771 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-24 12:04:02.772 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-24 12:04:02.772 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-24 12:04:02.862 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@318beab4, org.springframework.security.web.context.SecurityContextPersistenceFilter@7040d71, org.springframework.security.web.header.HeaderWriterFilter@56c7e2d1, org.springframework.security.web.authentication.logout.LogoutFilter@510d4d4b, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@79a88f45, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20a434a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73a5cc47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@578483bd, org.springframework.security.web.session.SessionManagementFilter@1ef8f7e6, org.springframework.security.web.access.ExceptionTranslationFilter@283595db, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65130cf2]
+INFO  2022-01-24 12:04:05.737 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-24 12:04:05.823 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:04:05.847 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-24 12:04:05.873 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 11.625 seconds (JVM running for 14.284)
+INFO  2022-01-24 12:04:07.954 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-24 12:04:07.960 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-24 12:04:07.965 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 4 ms
+INFO  2022-01-24 12:04:08.552 [http-nio-8080-exec-2] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+WARN  2022-01-24 12:05:16.605 [HikariPool-1 housekeeper] HikariPool$HouseKeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s876ms43µs935ns).
+INFO  2022-01-24 12:05:34.299 [http-nio-8080-exec-2] HierarchyServiceImpl - It was found 2 employees related to 'Evandro'
+INFO  2022-01-24 12:05:34.412 [http-nio-8080-exec-2] HierarchyServiceImpl - Supervisors of 'Evandro' found in database: {"name":"Fernando","subordinates":[{"name":"Evandro","subordinates":[]}]}
+INFO  2022-01-24 12:05:34.426 [http-nio-8080-exec-2] HierarchyServiceImpl - Returning response: {"Fernando":{"Evandro":{}}}
+INFO  2022-01-24 12:05:43.625 [http-nio-8080-exec-4] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+INFO  2022-01-24 12:06:30.866 [http-nio-8080-exec-4] HierarchyServiceImpl - It was found 2 employees related to 'Evandro'
+INFO  2022-01-24 12:06:30.869 [http-nio-8080-exec-4] HierarchyServiceImpl - Supervisors of 'Evandro' found in database: {"name":"Fernando","subordinates":[{"name":"Evandro","subordinates":[]}]}
+INFO  2022-01-24 12:06:30.873 [http-nio-8080-exec-4] HierarchyServiceImpl - Returning response: {"Fernando":{"Evandro":{}}}
+INFO  2022-01-24 12:06:32.777 [http-nio-8080-exec-5] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+WARN  2022-01-24 12:07:09.044 [HikariPool-1 housekeeper] HikariPool$HouseKeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s159ms556µs457ns).
+INFO  2022-01-24 12:07:09.046 [http-nio-8080-exec-5] HierarchyServiceImpl - It was found 2 employees related to 'Evandro'
+INFO  2022-01-24 12:07:09.049 [http-nio-8080-exec-5] HierarchyServiceImpl - Supervisors of 'Evandro' found in database: {"name":"Fernando","subordinates":[{"name":"Evandro","subordinates":[]}]}
+INFO  2022-01-24 12:07:09.052 [http-nio-8080-exec-5] HierarchyServiceImpl - Returning response: {"Fernando":{"Evandro":{}}}
+INFO  2022-01-24 12:07:11.993 [http-nio-8080-exec-7] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+INFO  2022-01-24 12:07:41.054 [http-nio-8080-exec-7] HierarchyServiceImpl - It was found 2 employees related to 'Evandro'
+INFO  2022-01-24 12:07:41.058 [http-nio-8080-exec-7] HierarchyServiceImpl - Supervisors of 'Evandro' found in database: {"name":"Fernando","subordinates":[{"name":"Evandro","subordinates":[]}]}
+INFO  2022-01-24 12:07:41.062 [http-nio-8080-exec-7] HierarchyServiceImpl - Returning response: {"Fernando":{"Evandro":{}}}
+INFO  2022-01-24 12:07:44.790 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-24 12:07:44.796 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-24 12:07:44.812 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-24 12:07:53.762 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-24 12:07:53.836 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 7636 (/home/evandro/personal-workspace/CompanyHierarchy/target/classes started by evandro in /home/evandro/personal-workspace/CompanyHierarchy)
+INFO  2022-01-24 12:07:53.867 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-24 12:07:55.830 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-24 12:07:55.926 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-24 12:07:57.175 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-24 12:07:57.194 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:07:57.195 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-24 12:07:57.196 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-24 12:07:57.367 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-24 12:07:57.368 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3397 ms
+INFO  2022-01-24 12:07:58.090 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-24 12:07:58.176 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-24 12:07:58.425 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-24 12:07:58.611 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-24 12:07:58.967 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-24 12:07:58.990 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-24 12:08:00.001 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-24 12:08:00.012 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-24 12:08:01.209 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-24 12:08:01.472 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b58637db-0b3a-4398-b389-333f09af08cb
+
+INFO  2022-01-24 12:08:01.683 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-24 12:08:01.685 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-24 12:08:01.685 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-24 12:08:01.686 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-24 12:08:01.686 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-24 12:08:01.687 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-24 12:08:01.819 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@125df632, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e3c6323, org.springframework.security.web.header.HeaderWriterFilter@581cb879, org.springframework.security.web.authentication.logout.LogoutFilter@52e44f71, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@1b472cad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f46bc25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7271320c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27aa0720, org.springframework.security.web.session.SessionManagementFilter@4d6f951a, org.springframework.security.web.access.ExceptionTranslationFilter@672c4e24, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@308f18c0]
+INFO  2022-01-24 12:08:04.394 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-24 12:08:04.456 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:08:04.476 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-24 12:08:04.498 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 11.201 seconds (JVM running for 13.717)
+INFO  2022-01-24 12:08:07.358 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-24 12:08:07.360 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-24 12:08:07.365 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 4 ms
+INFO  2022-01-24 12:08:07.991 [http-nio-8080-exec-1] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+INFO  2022-01-24 12:08:50.589 [http-nio-8080-exec-1] HierarchyServiceImpl - It was found 0 employees related to 'Evandro'
+INFO  2022-01-24 12:08:50.826 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-24 12:08:50.843 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-24 12:08:50.900 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-24 12:09:06.243 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-24 12:09:06.295 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 7796 (/home/evandro/personal-workspace/CompanyHierarchy/target/classes started by evandro in /home/evandro/personal-workspace/CompanyHierarchy)
+INFO  2022-01-24 12:09:06.304 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-24 12:09:08.093 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-24 12:09:08.181 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-24 12:09:09.284 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-24 12:09:09.302 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:09:09.304 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-24 12:09:09.306 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-24 12:09:09.414 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-24 12:09:09.415 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3040 ms
+INFO  2022-01-24 12:09:10.028 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-24 12:09:10.107 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-24 12:09:10.330 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-24 12:09:10.467 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-24 12:09:10.718 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-24 12:09:10.738 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-24 12:09:11.610 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-24 12:09:11.622 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-24 12:09:12.655 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-24 12:09:12.881 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 32623611-a4f5-4196-8d76-a5b8f9aef15a
+
+INFO  2022-01-24 12:09:13.050 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-24 12:09:13.052 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-24 12:09:13.052 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-24 12:09:13.052 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-24 12:09:13.053 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-24 12:09:13.053 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-24 12:09:13.155 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a67bcaf, org.springframework.security.web.context.SecurityContextPersistenceFilter@123d666b, org.springframework.security.web.header.HeaderWriterFilter@464017f5, org.springframework.security.web.authentication.logout.LogoutFilter@3a75d9a1, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@4f4b7a2e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d5b549b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a561f7d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@334ac669, org.springframework.security.web.session.SessionManagementFilter@6888746c, org.springframework.security.web.access.ExceptionTranslationFilter@18fcfe7e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a6df932]
+INFO  2022-01-24 12:09:15.589 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-24 12:09:15.661 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:09:15.685 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-24 12:09:15.713 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 9.983 seconds (JVM running for 11.978)
+INFO  2022-01-24 12:09:57.020 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-24 12:09:57.022 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-24 12:09:57.026 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 3 ms
+INFO  2022-01-24 12:09:57.610 [http-nio-8080-exec-2] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+INFO  2022-01-24 12:09:57.681 [http-nio-8080-exec-2] HierarchyServiceImpl - It was found 0 employees related to 'Evandro'
+INFO  2022-01-24 12:10:13.015 [http-nio-8080-exec-3] HierarchyController - Creating a new hierarchy. Submitted structure: {
+ "Ricardo":"Fernando",
+ "Bruno":"Fernando",
+ "Esther":"Fernando",
+	"Paulo":"Galindo",
+ "Evandro":"Fernando",
+ "Julio":"Fernando",
+ "Walter":"Fernando",
+ "Fernando":"Tercio",
+ "Jeferson":"Rubens",
+ "Valerio":"Galindo",
+ "Leandro":"Rubens",
+ "Thays":"Rubens",
+ "Rubens":"Tercio",
+ "Tercio":"Valerio" 
+}
+INFO  2022-01-24 12:10:13.018 [http-nio-8080-exec-3] HierarchyServiceImpl - Finding the boss of the structure...
+INFO  2022-01-24 12:10:13.022 [http-nio-8080-exec-3] HierarchyServiceImpl - Boss founded: Galindo
+INFO  2022-01-24 12:10:13.023 [http-nio-8080-exec-3] HierarchyServiceImpl - HashMap containing the relation has been created. Number of elements: 14
+INFO  2022-01-24 12:10:13.024 [http-nio-8080-exec-3] HierarchyServiceImpl - Converting the structure into a tree...
+INFO  2022-01-24 12:10:13.034 [http-nio-8080-exec-3] HierarchyServiceImpl - Strucutre tree: {"name":"Galindo","subordinates":[{"name":"Valerio","subordinates":[{"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[{"name":"Jeferson","subordinates":[]},{"name":"Leandro","subordinates":[]},{"name":"Thays","subordinates":[]}]},{"name":"Fernando","subordinates":[{"name":"Walter","subordinates":[]},{"name":"Ricardo","subordinates":[]},{"name":"Esther","subordinates":[]},{"name":"Julio","subordinates":[]},{"name":"Bruno","subordinates":[]},{"name":"Evandro","subordinates":[]}]}]}]},{"name":"Paulo","subordinates":[]}]}
+INFO  2022-01-24 12:10:13.035 [http-nio-8080-exec-3] HierarchyServiceImpl - Saving the structure into database...
+INFO  2022-01-24 12:10:13.092 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into database: {"employeeId":54,"name":"Galindo"}
+INFO  2022-01-24 12:10:13.096 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":55,"name":"Valerio","managerId":54}
+INFO  2022-01-24 12:10:13.100 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":47,"name":"Tercio","managerId":55}
+INFO  2022-01-24 12:10:13.104 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":56,"name":"Rubens","managerId":47}
+INFO  2022-01-24 12:10:13.109 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":57,"name":"Jeferson","managerId":56}
+INFO  2022-01-24 12:10:13.115 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":58,"name":"Leandro","managerId":56}
+INFO  2022-01-24 12:10:13.121 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":59,"name":"Thays","managerId":56}
+INFO  2022-01-24 12:10:13.127 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":48,"name":"Fernando","managerId":47}
+INFO  2022-01-24 12:10:13.131 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":49,"name":"Walter","managerId":48}
+INFO  2022-01-24 12:10:13.137 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":51,"name":"Ricardo","managerId":48}
+INFO  2022-01-24 12:10:13.143 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":52,"name":"Esther","managerId":48}
+INFO  2022-01-24 12:10:13.151 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":53,"name":"Julio","managerId":48}
+INFO  2022-01-24 12:10:13.157 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":50,"name":"Bruno","managerId":48}
+INFO  2022-01-24 12:10:13.161 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":1,"name":"Evandro","managerId":48}
+INFO  2022-01-24 12:10:13.166 [http-nio-8080-exec-3] HierarchyServiceImpl - Saved into table 'employee': {"employeeId":60,"name":"Paulo","managerId":54}
+INFO  2022-01-24 12:10:13.168 [http-nio-8080-exec-3] HierarchyServiceImpl - Returning response: {"Galindo":{"Paulo":{},"Valerio":{"Tercio":{"Rubens":{"Jeferson":{},"Leandro":{},"Thays":{}},"Fernando":{"Walter":{},"Bruno":{},"Ricardo":{},"Esther":{},"Evandro":{},"Julio":{}}}}}}
+INFO  2022-01-24 12:10:15.041 [http-nio-8080-exec-4] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+INFO  2022-01-24 12:10:15.043 [http-nio-8080-exec-4] HierarchyServiceImpl - It was found 0 employees related to 'Evandro'
+INFO  2022-01-24 12:10:29.015 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-24 12:10:29.019 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-24 12:10:29.042 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-24 12:10:35.452 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-24 12:10:35.591 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 7978 (/home/evandro/personal-workspace/CompanyHierarchy/target/classes started by evandro in /home/evandro/personal-workspace/CompanyHierarchy)
+INFO  2022-01-24 12:10:35.600 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-24 12:10:38.138 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-24 12:10:38.245 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-24 12:10:39.642 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-24 12:10:39.657 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:10:39.658 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-24 12:10:39.659 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-24 12:10:39.824 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-24 12:10:39.825 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4090 ms
+INFO  2022-01-24 12:10:40.460 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-24 12:10:40.548 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-24 12:10:40.784 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-24 12:10:40.935 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-24 12:10:41.305 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-24 12:10:41.328 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-24 12:10:42.278 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-24 12:10:42.292 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-24 12:10:43.557 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-24 12:10:43.781 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b6b68956-6f6a-4778-8236-716e4cb93f19
+
+INFO  2022-01-24 12:10:43.974 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-24 12:10:43.975 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-24 12:10:43.975 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-24 12:10:43.976 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-24 12:10:43.976 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-24 12:10:43.977 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-24 12:10:44.111 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@94f79a7, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d8a5ec7, org.springframework.security.web.header.HeaderWriterFilter@65384249, org.springframework.security.web.authentication.logout.LogoutFilter@1c0ec502, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@647d3279, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e763080, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65a7bc80, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b9a1be5, org.springframework.security.web.session.SessionManagementFilter@1e3c4c12, org.springframework.security.web.access.ExceptionTranslationFilter@1f031994, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39d44217]
+INFO  2022-01-24 12:10:46.753 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-24 12:10:46.816 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:10:46.837 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-24 12:10:46.863 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 11.956 seconds (JVM running for 14.687)
+INFO  2022-01-24 12:10:49.012 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-24 12:10:49.013 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-24 12:10:49.018 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 4 ms
+INFO  2022-01-24 12:10:49.555 [http-nio-8080-exec-1] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+INFO  2022-01-24 12:11:03.789 [http-nio-8080-exec-1] HierarchyServiceImpl - It was found 0 employees related to 'Evandro'
+INFO  2022-01-24 12:11:14.183 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-24 12:11:14.192 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-24 12:11:14.232 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2022-01-24 12:11:21.350 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+INFO  2022-01-24 12:11:21.459 [main] StartupInfoLogger - Starting CompanyHierarchyApplication using Java 11.0.1 on solomon with PID 8282 (/home/evandro/personal-workspace/CompanyHierarchy/target/classes started by evandro in /home/evandro/personal-workspace/CompanyHierarchy)
+INFO  2022-01-24 12:11:21.511 [main] SpringApplication - No active profile set, falling back to default profiles: default
+INFO  2022-01-24 12:11:24.251 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2022-01-24 12:11:24.429 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interfaces.
+INFO  2022-01-24 12:11:26.312 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+INFO  2022-01-24 12:11:26.331 [main] DirectJDKLog - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:11:26.333 [main] DirectJDKLog - Starting service [Tomcat]
+INFO  2022-01-24 12:11:26.335 [main] DirectJDKLog - Starting Servlet engine: [Apache Tomcat/9.0.56]
+INFO  2022-01-24 12:11:26.508 [main] DirectJDKLog - Initializing Spring embedded WebApplicationContext
+INFO  2022-01-24 12:11:26.509 [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4780 ms
+INFO  2022-01-24 12:11:27.490 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  2022-01-24 12:11:27.661 [main] Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+INFO  2022-01-24 12:11:28.061 [main] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  2022-01-24 12:11:28.250 [main] HikariDataSource - HikariPool-1 - Starting...
+INFO  2022-01-24 12:11:28.695 [main] HikariDataSource - HikariPool-1 - Start completed.
+INFO  2022-01-24 12:11:28.725 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+INFO  2022-01-24 12:11:30.476 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  2022-01-24 12:11:30.494 [main] AbstractEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2022-01-24 12:11:32.343 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2022-01-24 12:11:32.752 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: dd256713-08f8-4774-8fa0-ea3544cce3b6
+
+INFO  2022-01-24 12:11:33.107 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+INFO  2022-01-24 12:11:33.108 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+INFO  2022-01-24 12:11:33.108 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+INFO  2022-01-24 12:11:33.109 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+INFO  2022-01-24 12:11:33.111 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+INFO  2022-01-24 12:11:33.111 [main] DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+INFO  2022-01-24 12:11:33.316 [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40273969, org.springframework.security.web.context.SecurityContextPersistenceFilter@464017f5, org.springframework.security.web.header.HeaderWriterFilter@73eaae1e, org.springframework.security.web.authentication.logout.LogoutFilter@3ac76ad9, com.personio.companyhierarchy.security.filter.JWTAuthenticationFilter@5ec25b61, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72e4ffa2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@507187c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7da40bf4, org.springframework.security.web.session.SessionManagementFilter@5319e4fc, org.springframework.security.web.access.ExceptionTranslationFilter@1e6f7c25, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4830c979]
+INFO  2022-01-24 12:11:38.475 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+INFO  2022-01-24 12:11:38.607 [main] DirectJDKLog - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2022-01-24 12:11:38.652 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  2022-01-24 12:11:38.695 [main] StartupInfoLogger - Started CompanyHierarchyApplication in 17.912 seconds (JVM running for 19.742)
+INFO  2022-01-24 12:11:58.051 [http-nio-8080-exec-1] DirectJDKLog - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2022-01-24 12:11:58.052 [http-nio-8080-exec-1] FrameworkServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2022-01-24 12:11:58.056 [http-nio-8080-exec-1] FrameworkServlet - Completed initialization in 4 ms
+INFO  2022-01-24 12:11:58.576 [http-nio-8080-exec-2] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Evandro'
+INFO  2022-01-24 12:11:58.640 [http-nio-8080-exec-2] HierarchyServiceImpl - It was found 0 employees related to 'Evandro'
+INFO  2022-01-24 12:11:58.649 [http-nio-8080-exec-2] HierarchyServiceImpl - Supervisors of 'Evandro' found in database: {"name":"Tercio","subordinates":[{"name":"Fernando","subordinates":[{"name":"Evandro","subordinates":[]}]}]}
+INFO  2022-01-24 12:11:58.651 [http-nio-8080-exec-2] HierarchyServiceImpl - Returning response: {"Tercio":{"Fernando":{"Evandro":{}}}}
+INFO  2022-01-24 12:12:03.629 [http-nio-8080-exec-3] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Thays'
+INFO  2022-01-24 12:12:03.632 [http-nio-8080-exec-3] HierarchyServiceImpl - It was found 0 employees related to 'Thays'
+INFO  2022-01-24 12:12:03.632 [http-nio-8080-exec-3] HierarchyServiceImpl - Supervisors of 'Thays' found in database: {"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[{"name":"Thays","subordinates":[]}]}]}
+INFO  2022-01-24 12:12:03.632 [http-nio-8080-exec-3] HierarchyServiceImpl - Returning response: {"Tercio":{"Rubens":{"Thays":{}}}}
+INFO  2022-01-24 12:12:06.867 [http-nio-8080-exec-4] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Rubens'
+INFO  2022-01-24 12:12:06.871 [http-nio-8080-exec-4] HierarchyServiceImpl - It was found 0 employees related to 'Rubens'
+INFO  2022-01-24 12:12:06.873 [http-nio-8080-exec-4] HierarchyServiceImpl - Supervisors of 'Rubens' found in database: {"name":"Valerio","subordinates":[{"name":"Tercio","subordinates":[{"name":"Rubens","subordinates":[]}]}]}
+INFO  2022-01-24 12:12:06.875 [http-nio-8080-exec-4] HierarchyServiceImpl - Returning response: {"Valerio":{"Tercio":{"Rubens":{}}}}
+INFO  2022-01-24 12:12:10.511 [http-nio-8080-exec-5] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Tercio'
+INFO  2022-01-24 12:12:10.515 [http-nio-8080-exec-5] HierarchyServiceImpl - It was found 0 employees related to 'Tercio'
+INFO  2022-01-24 12:12:10.515 [http-nio-8080-exec-5] HierarchyServiceImpl - Supervisors of 'Tercio' found in database: {"name":"Galindo","subordinates":[{"name":"Valerio","subordinates":[{"name":"Tercio","subordinates":[]}]}]}
+INFO  2022-01-24 12:12:10.516 [http-nio-8080-exec-5] HierarchyServiceImpl - Returning response: {"Galindo":{"Valerio":{"Tercio":{}}}}
+INFO  2022-01-24 12:12:14.153 [http-nio-8080-exec-6] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Valerio'
+INFO  2022-01-24 12:12:14.158 [http-nio-8080-exec-6] HierarchyServiceImpl - It was found 0 employees related to 'Valerio'
+INFO  2022-01-24 12:12:14.158 [http-nio-8080-exec-6] HierarchyServiceImpl - Supervisors of 'Valerio' found in database: {"name":"Galindo","subordinates":[{"name":"Valerio","subordinates":[]}]}
+INFO  2022-01-24 12:12:14.159 [http-nio-8080-exec-6] HierarchyServiceImpl - Returning response: {"Galindo":{"Valerio":{}}}
+INFO  2022-01-24 12:12:17.008 [http-nio-8080-exec-7] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'Galindo'
+INFO  2022-01-24 12:12:17.013 [http-nio-8080-exec-7] HierarchyServiceImpl - It was found 0 employees related to 'Galindo'
+INFO  2022-01-24 12:12:17.014 [http-nio-8080-exec-7] HierarchyServiceImpl - Supervisors of 'Galindo' found in database: {"name":"Galindo","subordinates":[]}
+INFO  2022-01-24 12:12:17.014 [http-nio-8080-exec-7] HierarchyServiceImpl - Returning response: {"Galindo":{}}
+INFO  2022-01-24 12:12:19.084 [http-nio-8080-exec-8] HierarchyController - Searching for supervisor and supervisor's supervisor of the employee 'd'
+INFO  2022-01-24 12:12:19.086 [http-nio-8080-exec-8] HierarchyServiceImpl - It was found 0 employees related to 'd'
+INFO  2022-01-24 12:17:00.183 [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2022-01-24 12:17:00.190 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2022-01-24 12:17:00.208 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
